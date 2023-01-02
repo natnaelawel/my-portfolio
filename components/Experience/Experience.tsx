@@ -67,7 +67,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-3/5 px-10 my-5 py-5 jobs__StyledJobsSection-sc-59sdss-0 jdfosx "
+      className="w-11/12 lg:w-3/5 px-4 lg:px-10 my-5 py-5  "
       data-sr-id="2"
       style={{
         visibility: 'visible',
@@ -77,14 +77,14 @@ const Experience = () => {
           'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
       }}
     >
-      <h2 className="numbered-heading flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
-        Where I’ve Worked
+      <h2 className=" flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
+        Where I&apos;ve Worked
       </h2>
-      <div className="inner flex min-h-max gap-x-14 gap-y-5 text-sm">
+      <div className="inner flex flex-col lg:flex-row min-h-max gap-x-14 gap-y-5 text-sm">
         <div
           role="tablist"
           aria-label="Job tabs"
-          className="relative w-max flex flex-col"
+          className="relative w-max flex flex-row lg:flex-col h-10 overscroll-x-auto"
         >
           {experiences.map((experience: any, index: number) => {
             return (
@@ -96,18 +96,18 @@ const Experience = () => {
                 aria-selected="true"
                 aria-controls={`panel-${experience.id}`}
                 className={clsx(
-                  'text-sm text-start border-l-2 border-lightest_navy text-slate whitespace-nowrap flex items-center bg-transparent hover:text-accent hover:bg-accent/5 px-5 py-3',
+                  'text-start border-b-2 lg:border-b-0 text-[12px] lg:text-sm lg:border-l-2 border-lightest_navy text-slate whitespace-nowrap flex items-center bg-transparent hover:text-accent hover:bg-accent/5 px-2 lg:px-5 py-1 lg:py-3',
                   activeExp.id === experience.id &&
                     '!text-accent !border-accent'
                 )}
               >
-                <span>{experience.company}</span>
+                <span className="">{experience.company}</span>
               </button>
             );
           })}
           <div className="jobs__StyledHighlight-sc-59sdss-3 fLsUSJ"></div>
         </div>
-        <div className="w-[600px] min-h-[450px]">
+        <div className="w-full max-w-[600px] min-h-[450px] py-5 p-auto text-[13px] flex-wrap">
           <AnimatePresence mode="wait">
             {activeExp && (
               <motion.div
@@ -135,12 +135,12 @@ const Experience = () => {
                   {activeExp.from} - {activeExp.to}
                 </p>
                 <div>
-                  <ul>
+                  <ul className="flex flex-col flex-wrap max-w-full px-5">
                     {activeExp.descriptions.map(
                       (desc: string, index: number) => (
                         <li
                           key={desc}
-                          className="flex my-4 items-start justify-between before:my-1 relative before:content-['▹'] before:absolute before:text-accent before:text-xl before:leading-3 before:-ml-5"
+                          className="flex my-1 lg:my-4 items-start justify-between before:my-1 relative before:content-['▹'] before:absolute before:text-accent before:text-xl before:leading-3 before:-ml-5"
                         >
                           {desc}
                         </li>

@@ -51,7 +51,6 @@ export default function Home() {
             <SlideWrapper from="right">
               <Experience />
             </SlideWrapper>
-
             <Projects />
             <OtherProjects />
             <ContactUS />

@@ -65,7 +65,7 @@ const OtherProjects = (props: Props) => {
   ];
 
   return (
-    <section className="w-3/4 px-10 projects__StyledProjectsSection-sc-1v1fime-0 flex flex-col items-center gap-y-2">
+    <section className="w-11/12 lg:w-3/4 px-4 flex flex-col items-center gap-y-2">
       <h2
         className="font-semibold text-lightest_slate text-2xl"
         style={{
@@ -94,7 +94,7 @@ const OtherProjects = (props: Props) => {
         view the archive
       </a>
 
-      <ul className="projects-grid grid grid-cols-3 gap-5 relative my-4">
+      <ul className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative my-2 lg:my-4">
         {otherProjects.map((project, index) => {
           return (
             <li

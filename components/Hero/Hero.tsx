@@ -19,14 +19,14 @@ const HeroComponent = () => {
   return (
     <section
       ref={ref}
-      className="w-4/5 px-10 my-10 py-12 relative  overflow-hidden gap-y-10 sm:pb-16 lg:pb-20 xl:pb-24"
+      className="w-4/5 lg:px-10 my-5 lg:my-10 py-5 lg:py-12 relative  overflow-hidden gap-y-10 sm:pb-16 lg:pb-20 xl:pb-24"
     >
       <div className="fadeup-enter-done  transition delay-100 py-5 text-xl text-accent">
         <h1 className="font-mono">Hi, my name is</h1>
       </div>
       <div className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-text-lightest_slate py-3">
         <div className="fadeup-enter-done transition delay-200">
-          <h2 className="text-6xl font-bold  big-heading   ">
+          <h2 className="text-4xl lg:text-6xl font-bold big-heading   ">
             Nathaniel Hussein.
           </h2>
         </div>
@@ -36,7 +36,7 @@ const HeroComponent = () => {
           I build things for the web.
         </h3>
       </div>
-      <div className="fadeup-enter-done transition delay-400 my-5 w-3/5 tracking-wide leading-6">
+      <div className="fadeup-enter-done transition delay-400 my-5 w-full text-xs lg:text-base lg:w-3/5 tracking-wide leading-6">
         <p className="text-slate">
           Software engineer looking for full-time opportunities in businesses
           where I can make my most contribution. I&apos;m a passionate and
@@ -47,7 +47,7 @@ const HeroComponent = () => {
       </div>
       <div className="fadeup-enter-done transition duration-500 my-10">
         <a
-          className="email-link text-accent bg-transparent border border-accent rounded-lg px-10 py-4 leading-4 cursor-pointer hover:bg-accent/5"
+          className="email-link text-accent bg-transparent border border-accent rounded-sm lg:rounded-lg px-4 lg:px-10 py-2 lg:py-4 leading-4 cursor-pointer hover:bg-accent/5"
           href="https://www.newline.co/courses/build-a-spotify-connected-app"
           target="_blank"
           rel="noreferrer"

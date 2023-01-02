@@ -7,7 +7,7 @@ const ContactUS = (props: Props) => {
   return (
     <section
       id="contact"
-      className=" w-2/3 px-5 my-16 py-12"
+      className="w-11/12 lg:w-2/3 px-5 my-5 py-5"
       data-sr-id="15"
       style={{
         visibility: 'visible',
@@ -19,7 +19,7 @@ const ContactUS = (props: Props) => {
     >
       <div className="flex flex-col items-center gap-y-2">
         <h2 className="numbered-heading font-mono text-sm text-accent">
-          What’s Next?
+          What&apos;s Next?
         </h2>
         <h2 className="title text-4xl font-bold text-lightest_slate my-5">
           Get In Touch

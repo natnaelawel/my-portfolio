@@ -38,7 +38,7 @@ const AboutMe = (props: Props) => {
   return (
     <section
       id="about"
-      className="about__StyledAboutSection-sc-1ownso9-0 w-3/4 px-5 my-5 py-5 text-sm"
+      className="w-11/12 lg:w-3/4 px-5 my-5 py-5 text-sm"
       data-sr-id="0"
       style={{
         visibility: 'visible',
@@ -51,8 +51,8 @@ const AboutMe = (props: Props) => {
       <h2 className="flex my-3 font-bold text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         About Me
       </h2>
-      <div className="inner my-2 flex  gap-x-10 justify-between items-start text-sm">
-        <div className="about__StyledText-sc-1ownso9-1 kNIdQM my-2 w-3/5 leading-6">
+      <div className="inner my-2 flex flex-col lg:flex-row gap-y-4 gap-x-6 justify-between items-start text-sm">
+        <div className=" my-2 w-full text-xs leading-5 lg:text-base lg:w-3/5 lg:leading-6">
           <div>
             <p>
               Hello! My name is Nathaniel and I enjoy creating things that live
@@ -70,12 +70,12 @@ const AboutMe = (props: Props) => {
               <h2 className="font-semibold text-lighter_slate font-mono">
                 Languages:
               </h2>
-              <ul className="w-full skills-list flex flex-wrap gap-x-10  pl-10 text-sm tracking-wide leading-5">
+              <ul className="w-full skills-list flex flex-wrap gap-x-4 lg:gap-x-10  pl-10 text-sm tracking-wide leading-5">
                 {languages.map((tech, index) => {
                   return (
                     <li
                       key={`${tech}-1`}
-                      className="flex items-center text-xs justify-between before:my-1 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
+                      className="flex font-mono text-[13px] lg:text-base tracking-tighter lg:tracking-normal items-center text-xs justify-between before:my-1 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
                     >
                       {tech}
                     </li>
@@ -87,12 +87,12 @@ const AboutMe = (props: Props) => {
               <h2 className="font-semibold text-lighter_slate font-mono">
                 Frameworks:
               </h2>
-              <ul className="w-full skills-list flex flex-wrap gap-x-10  pl-10 tracking-wide leading-5 text-xs">
+              <ul className="w-full skills-list flex flex-wrap gap-x-4 lg:gap-x-10   pl-10 tracking-wide leading-5 text-xs">
                 {frameworks.map((tech, index) => {
                   return (
                     <li
                       key={`${tech}-1`}
-                      className="flex items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
+                      className="flex font-mono text-[13px] lg:text-base tracking-tighter lg:tracking-normal items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
                     >
                       {tech}
                     </li>
@@ -104,12 +104,12 @@ const AboutMe = (props: Props) => {
               <h2 className="font-semibold text-lighter_slate font-mono">
                 Other Tools:
               </h2>
-              <ul className="w-full skills-list flex flex-wrap gap-x-10  pl-10 tracking-wide leading-5 text-xs">
+              <ul className="w-full skills-list flex flex-wrap gap-x-4 lg:gap-x-10   pl-10 tracking-wide leading-5 text-xs">
                 {otherTools.map((tech, index) => {
                   return (
                     <li
                       key={`${tech}-1`}
-                      className="flex items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
+                      className="flex font-mono text-[13px] lg:text-base tracking-tighter lg:tracking-normal items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
                     >
                       {tech}
                     </li>
@@ -119,7 +119,7 @@ const AboutMe = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="about__StyledPic-sc-1ownso9-2 iTdkQf w-2/5">
+        <div className="w-11/12 lg:w-2/5">
           <div
             style={{
               boxShadow: '0 10px 30px -15px var(--navy-shadow)',

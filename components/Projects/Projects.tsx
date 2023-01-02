@@ -19,14 +19,11 @@ const Projects = (props: Props) => {
   ];
 
   return (
-    <section
-      id="jobs"
-      className="w-3/4 px-10 my-10 py-12 jobs__StyledJobsSection-sc-59sdss-0 jdfosx "
-    >
+    <section id="jobs" className="w-11/12 lg:w-3/4 px-5 lg:px-10 my-5 py-5">
       <h2 className="numbered-heading flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         Some Things I&apos;ve Built
       </h2>
-      <ul className="featured__StyledProjectsGrid-ywnbqt-0 dnNJYD flex flex-col gap-y-24 text-sm">
+      <ul className=" flex flex-col lg:gap-y-24 text-sm">
         {projects.map((project, index) => {
           return index % 2 === 0 ? (
             <SlideWrapper key={project.id} from="right">
@@ -42,7 +39,7 @@ const Projects = (props: Props) => {
                 }}
               >
                 <div
-                  className="project-image z-10 relative w-[600px] "
+                  className="project-image z-10 relative w-[600px]  min-w-[300px]"
                   style={{
                     boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                     transition: 'var(--transition)',
@@ -127,7 +124,7 @@ const Projects = (props: Props) => {
                     </a>
                   </h3>
                   <div
-                    className="project-description relative z-20 rounded-lg"
+                    className="project-description relative z-20 rounded-lg min-w-[300px]"
                     style={{
                       boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                       transition: 'var(--transition)',
@@ -228,7 +225,7 @@ const Projects = (props: Props) => {
                 }}
               >
                 <div
-                  className="project-content relative gap-y-3 grid-col-[7/-1] group-[:nth-of-type(2n+1)_&]:[grid-column: 5 / -1] "
+                  className="project-content relative gap-y-3 w-[600px]"
                   style={{
                     gridArea: '1/1/-1/ 7',
                   }}
@@ -246,7 +243,7 @@ const Projects = (props: Props) => {
                     </a>
                   </h3>
                   <div
-                    className="project-description relative z-20 rounded-lg"
+                    className="project-description relative z-20 rounded-lg min-w-[300px] "
                     style={{
                       boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                       transition: 'var(--transition)',
@@ -296,7 +293,7 @@ const Projects = (props: Props) => {
                       .
                     </p>
                   </div>
-                  <ul className="project-tech-list my-5 flex gap-x-3 tracking-tighter text-sm flex-wrap relative mx-2 z-20 font-mono">
+                  <ul className="project-tech-list text-xs my-5 flex gap-x-2 tracking-tighter flex-wrap relative mx-2 z-20 font-mono">
                     <li className="mx-1 text-slate whitespace-nowrap">
                       VS Code
                     </li>
@@ -330,15 +327,16 @@ const Projects = (props: Props) => {
                   </div>
                 </div>
                 <div
-                  className="project-image z-10 relative "
+                  className="project-image w-full h-full z-0 relative "
                   style={{
                     boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                     transition: 'var(--transition)',
+                    // gridColumn: "1/12",
                     gridArea: '1/6/-1/-1',
                   }}
                 >
                   <a
-                    className={clsx(styles.project_image__a)}
+                    className={clsx('h-full', styles.project_image__a)}
                     href="https://halcyon-theme.netlify.com/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -350,11 +348,10 @@ const Projects = (props: Props) => {
                       }}
                       className={clsx(styles.wrapper)}
                     >
-                      <div className={clsx('relative', styles.wrapper__img)}>
-                        <div
-                          className="absolute -z-20 top-0 left-0 "
-                          style={{ maxWidth: '300px', display: 'block' }}
-                        >
+                      <div
+                        className={clsx('relative h-full', styles.wrapper__img)}
+                      >
+                        <div className="absolute block -z-20 top-0 left-0 min-w-[500px] border  h-full w-full object-cover ">
                           <img
                             alt=""
                             role="presentation"
@@ -380,7 +377,7 @@ const Projects = (props: Props) => {
                           }}
                         ></div>
                         <img
-                          className="max-w-full block static"
+                          className="max-w-full h-full w-full object-cover block static"
                           // width="450px"
                           // height="450px"
                           decoding="async"
