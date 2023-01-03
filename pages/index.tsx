@@ -39,11 +39,11 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="w-full h-full">
+        <div className="w-full h-full min-h-screen">
           <Navbar />
           <SMSideElements />
           <EmailSideElements />
-          <main className="flex flex-col items-center justify-center min-h-screen my-10">
+          <main className="flex flex-col items-center w-full justify-center min-h-screen my-10">
             <HeroComponent />
             <SlideWrapper from="left">
               <AboutMe />

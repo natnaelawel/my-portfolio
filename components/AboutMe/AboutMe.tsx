@@ -52,7 +52,7 @@ const AboutMe = (props: Props) => {
         About Me
       </h2>
       <div className="inner my-2 flex flex-col lg:flex-row gap-y-4 gap-x-6 justify-between items-start text-sm">
-        <div className=" my-2 w-full text-xs leading-5 lg:text-base lg:w-3/5 lg:leading-6">
+        <div className=" my-2 w-full text-xs leading-5 lg:text-sm lg:w-3/5 lg:leading-5">
           <div>
             <p>
               Hello! My name is Nathaniel and I enjoy creating things that live
@@ -66,7 +66,7 @@ const AboutMe = (props: Props) => {
             </p>
           </div>
           <div className="skills !text-xs">
-            <div className="flex flex-col my-2">
+            <div className="flex flex-col my-2 !text-xs">
               <h2 className="font-semibold text-lighter_slate font-mono">
                 Languages:
               </h2>
@@ -75,7 +75,7 @@ const AboutMe = (props: Props) => {
                   return (
                     <li
                       key={`${tech}-1`}
-                      className="flex font-mono text-[13px] lg:text-base tracking-tighter lg:tracking-normal items-center text-xs justify-between before:my-1 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
+                      className="flex font-mono text-[13px] lg:text-sm tracking-tighter lg:tracking-normal items-center text-xs justify-between before:my-1 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
                     >
                       {tech}
                     </li>
@@ -92,7 +92,7 @@ const AboutMe = (props: Props) => {
                   return (
                     <li
                       key={`${tech}-1`}
-                      className="flex font-mono text-[13px] lg:text-base tracking-tighter lg:tracking-normal items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
+                      className="flex font-mono text-[13px] lg:text-sm tracking-tighter lg:tracking-normal items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
                     >
                       {tech}
                     </li>
@@ -109,7 +109,7 @@ const AboutMe = (props: Props) => {
                   return (
                     <li
                       key={`${tech}-1`}
-                      className="flex font-mono text-[13px] lg:text-base tracking-tighter lg:tracking-normal items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
+                      className="flex font-mono text-[13px] lg:text-sm tracking-tighter lg:tracking-normal items-center justify-between before:my-2 relative before:content-['▹'] before:absolute before:items-center before:text-accent before:text-xl before:leading-3 before:-ml-4 "
                     >
                       {tech}
                     </li>

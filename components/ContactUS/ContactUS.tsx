@@ -7,7 +7,7 @@ const ContactUS = (props: Props) => {
   return (
     <section
       id="contact"
-      className="w-11/12 lg:w-2/3 px-5 my-5 py-5"
+      className="w-11/12 lg:w-2/3 px-5 my-10 py-5"
       data-sr-id="15"
       style={{
         visibility: 'visible',
@@ -30,26 +30,32 @@ const ContactUS = (props: Props) => {
             Go ahead.{' '}
           </span>
         </p>
-        <div className="flex gap-x-5 flex-col sm:flex-row gap-y-5 my-10 items-center text-center justify-center">
+        <div className="flex gap-x-5 flex-col sm:flex-row gap-y-5 my-5 md:my-10 items-center text-center justify-center">
           <a
-            className="email-link h-full  text-sm font-mono text-accent bg-transparent flex items-center gap-x-4 border border-accent rounded-sm px-6 hover:scale-110 transition duration-500 ease-in-out py-4 leading-4 cursor-pointer hover:bg-accent/5"
+            className="email-link h-full text-xs lg:text-sm font-mono text-accent bg-transparent flex items-center gap-x-4 border border-accent rounded-sm  px-4 sm:px-6  hover:scale-110 transition duration-500 ease-in-out  py-2 lg:py-4 leading-4 cursor-pointer hover:bg-accent/5"
             href="mailto:natnael.awel@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
           >
             <span>
-              <CustomSVGIcon className="!w-6 !h-6" name="email" />
+              <CustomSVGIcon
+                className="!w-4 !h-4 lg:!w-6 lg:!h-6"
+                name="email"
+              />
             </span>
             <span>natnael.awel@gmail.com</span>
           </a>
           <a
-            className="email-link h-full font-mono text-accent bg-transparent flex items-center gap-x-4 border border-accent rounded-sm px-6 hover:scale-110 transition duration-500 ease-in-out py-4 leading-4 cursor-pointer hover:bg-accent/5"
+            className="email-link h-full font-mono text-xs lg:text-sm text-accent bg-transparent flex items-center gap-x-4 border border-accent rounded-sm px-4 sm:px-6 hover:scale-110 transition duration-500 ease-in-out py-2 lg:py-4 leading-4 cursor-pointer hover:bg-accent/5"
             href="tel:+251915690645"
             rel="noopener noreferrer"
             target="_blank"
           >
             <span>
-              <CustomSVGIcon className="!w-6 !h-6" name="phone" />
+              <CustomSVGIcon
+                className="!w-4 !h-4 lg:!w-6 lg:!h-6"
+                name="phone"
+              />
             </span>
             <span>+251 915 690 645</span>
           </a>

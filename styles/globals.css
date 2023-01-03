@@ -16,12 +16,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
+  --primary-glow: repeating-conic-gradient(
+    from 180deg at 50% 5%,
     #020c1b 0deg,
     #0a192f 55deg,
-    #112240 120deg,
-    #0a192f 160deg,
+    #0a192f 120deg,
+    #112240 160deg,
     transparent 360deg
   );
   --secondary-glow: radial-gradient(

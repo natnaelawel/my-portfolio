@@ -9,12 +9,147 @@ const Projects = (props: Props) => {
   const projects = [
     {
       id: '1',
+      title: 'Monarch',
+      href: 'https://thorstarter-three.vercel.app/',
+      img: '/images/projects/monarch-1.png',
+      description: (
+        <p>
+          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
+          more. Available on{' '}
+          <a
+            className="text-accent"
+            href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visual Studio Marketplace
+          </a>
+          ,{' '}
+          <a
+            className="text-accent"
+            href="https://packagecontrol.io/packages/Halcyon%20Theme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Package Control
+          </a>
+          ,{' '}
+          <a
+            href="https://atom.io/themes/halcyon-syntax"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Atom Package Manager
+          </a>
+          , and{' '}
+          <a
+            href="https://www.npmjs.com/package/hyper-halcyon-theme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            npm
+          </a>
+          .
+        </p>
+      ),
+      repo: 'https://github.com/bchiang7/halcyon-site',
+      techs: ['ReactJS', 'NextJS', 'Web3'],
     },
     {
       id: '2',
+      title: 'Mintplex',
+      href: 'https://halcyon-theme.netlify.com/',
+      img: '/images/projects/monarch-1.png',
+      description: (
+        <p>
+          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
+          more. Available on{' '}
+          <a
+            className="text-accent"
+            href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visual Studio Marketplace
+          </a>
+          ,{' '}
+          <a
+            className="text-accent"
+            href="https://packagecontrol.io/packages/Halcyon%20Theme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Package Control
+          </a>
+          ,{' '}
+          <a
+            href="https://atom.io/themes/halcyon-syntax"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Atom Package Manager
+          </a>
+          , and{' '}
+          <a
+            href="https://www.npmjs.com/package/hyper-halcyon-theme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            npm
+          </a>
+          .
+        </p>
+      ),
+      repo: 'https://github.com/bchiang7/halcyon-site',
+      techs: ['ReactJS', 'NextJS', 'Web3'],
     },
     {
       id: '3',
+      title: 'Convex',
+      href: 'https://nft-proj.vercel.app/dapp',
+      img: '/images/projects/monarch-2.png',
+      description: (
+        <p>
+          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
+          more. Available on{' '}
+          <a
+            className="text-accent"
+            href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visual Studio Marketplace
+          </a>
+          ,{' '}
+          <a
+            className="text-accent"
+            href="https://packagecontrol.io/packages/Halcyon%20Theme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Package Control
+          </a>
+          ,{' '}
+          <a
+            href="https://atom.io/themes/halcyon-syntax"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Atom Package Manager
+          </a>
+          , and{' '}
+          <a
+            href="https://www.npmjs.com/package/hyper-halcyon-theme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            npm
+          </a>
+          .
+        </p>
+      ),
+      repo: 'https://github.com/bchiang7/halcyon-site',
+      techs: ['ReactJS', 'NextJS', 'Web3'],
     },
   ];
 
@@ -57,7 +192,7 @@ const Projects = (props: Props) => {
                       borderRadius: 'var(--border-radius)',
                       verticalAlign: 'middle',
                     }}
-                    href="https://halcyon-theme.netlify.com/"
+                    href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -98,8 +233,8 @@ const Projects = (props: Props) => {
                         <img
                           className="h-full w-full object-cover"
                           decoding="async"
-                          src="/images/projects/mintplex-1.png"
-                          alt="Headshot"
+                          src={project.img}
+                          alt={project.title}
                         />
                       </div>
                     </div>
@@ -116,11 +251,11 @@ const Projects = (props: Props) => {
                   </p>
                   <h3 className="project-title text-lightest_slate font-semibold my-3 hover:text-accent text-2xl hover:font-bold">
                     <a
-                      href="https://halcyon-theme.netlify.com/"
+                      href={project.href}
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Halcyon Theme
+                      {project.title}
                     </a>
                   </h3>
                   <div
@@ -137,62 +272,23 @@ const Projects = (props: Props) => {
                       fontSize: 'var(--fz-lg)',
                     }}
                   >
-                    <p>
-                      A minimal, dark blue theme for VS Code, Sublime Text,
-                      Atom, iTerm, and more. Available on{' '}
-                      <a
-                        className="text-accent"
-                        href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Visual Studio Marketplace
-                      </a>
-                      ,{' '}
-                      <a
-                        className="text-accent"
-                        href="https://packagecontrol.io/packages/Halcyon%20Theme"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Package Control
-                      </a>
-                      ,{' '}
-                      <a
-                        href="https://atom.io/themes/halcyon-syntax"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Atom Package Manager
-                      </a>
-                      , and{' '}
-                      <a
-                        href="https://www.npmjs.com/package/hyper-halcyon-theme"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        npm
-                      </a>
-                      .
-                    </p>
+                    {project.description}
                   </div>
                   <ul className="project-tech-list my-5 flex gap-x-2 tracking-tighter text-xs max-w-md self-end text-right flex-wrap justify-end relative mx-2 z-20 font-mono">
-                    <li className="mx-1 text-slate whitespace-nowrap">
-                      VS Code
-                    </li>
-                    <li className="mx-1 text-slate whitespace-nowrap">
-                      {' '}
-                      Sublime Text{' '}
-                    </li>
-                    <li className="mx-1 text-slate whitespace-nowrap">Atom</li>
-                    <li className="mx-1 text-slate whitespace-nowrap">
-                      iTerm2
-                    </li>
-                    <li className="mx-1 text-slate whitespace-nowrap">Hyper</li>
+                    {project.techs?.map((tech, index) => {
+                      return (
+                        <li
+                          key={tech}
+                          className="mx-1 text-slate whitespace-nowrap"
+                        >
+                          {tech}
+                        </li>
+                      );
+                    })}
                   </ul>
                   <div className=" project-links text-lightest_slate my-3 flex justify-end items-center gap-x-2">
                     <a
-                      href="https://github.com/bchiang7/halcyon-site"
+                      href={project.repo}
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -200,7 +296,7 @@ const Projects = (props: Props) => {
                       <CustomSVGIcon className="" name="github" />
                     </a>
                     <a
-                      href="https://halcyon-theme.netlify.com/"
+                      href={project.href}
                       aria-label="External Link"
                       className="external"
                       rel="noopener noreferrer"
@@ -235,11 +331,11 @@ const Projects = (props: Props) => {
                   </p>
                   <h3 className="project-title text-lightest_slate font-semibold my-3 hover:text-accent text-2xl hover:font-bold">
                     <a
-                      href="https://halcyon-theme.netlify.com/"
+                      href={project.href}
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Halcyon Theme
+                      {project.title}
                     </a>
                   </h3>
                   <div
@@ -256,59 +352,23 @@ const Projects = (props: Props) => {
                       fontSize: 'var(--fz-lg)',
                     }}
                   >
-                    <p>
-                      A minimal, dark blue theme for VS Code, Sublime Text,
-                      Atom, iTerm, and more. Available on{' '}
-                      <a
-                        href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Visual Studio Marketplace
-                      </a>
-                      ,{' '}
-                      <a
-                        href="https://packagecontrol.io/packages/Halcyon%20Theme"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Package Control
-                      </a>
-                      ,{' '}
-                      <a
-                        href="https://atom.io/themes/halcyon-syntax"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Atom Package Manager
-                      </a>
-                      , and{' '}
-                      <a
-                        href="https://www.npmjs.com/package/hyper-halcyon-theme"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        npm
-                      </a>
-                      .
-                    </p>
+                    {project.description}
                   </div>
                   <ul className="project-tech-list text-xs my-5 flex gap-x-2 tracking-tighter flex-wrap relative mx-2 z-20 font-mono">
-                    <li className="mx-1 text-slate whitespace-nowrap">
-                      VS Code
-                    </li>
-                    <li className="mx-1 text-slate whitespace-nowrap">
-                      Sublime Text
-                    </li>
-                    <li className="mx-1 text-slate whitespace-nowrap">Atom</li>
-                    <li className="mx-1 text-slate whitespace-nowrap">
-                      iTerm2
-                    </li>
-                    <li className="mx-1 text-slate whitespace-nowrap">Hyper</li>
+                    {project.techs?.map((tech, index) => {
+                      return (
+                        <li
+                          key={tech}
+                          className="mx-1 text-slate whitespace-nowrap"
+                        >
+                          {tech}
+                        </li>
+                      );
+                    })}
                   </ul>
                   <div className="project-links text-lightest_slate my-3 flex items-center gap-x-2">
                     <a
-                      href="https://github.com/bchiang7/halcyon-site"
+                      href={project.repo}
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -316,7 +376,7 @@ const Projects = (props: Props) => {
                       <CustomSVGIcon className="" name="github" />
                     </a>
                     <a
-                      href="https://halcyon-theme.netlify.com/"
+                      href={project.href}
                       aria-label="External Link"
                       className="external"
                       rel="noopener noreferrer"

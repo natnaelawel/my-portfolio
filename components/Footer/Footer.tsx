@@ -1,9 +1,10 @@
+import { format } from 'date-fns';
 import React from 'react';
 import CustomSVGIcon from '../../utils/getSVG';
 
 const Footer = () => {
   return (
-    <footer className="w-full flex justify-center items-center min-h-[70px] p-4 text-sm font-mono">
+    <footer className="w-full flex justify-center items-center min-h-[70px] mt-10 text-sm font-mono">
       <div className="flex items-center -tracking-widest text-xs">
         <a
           className="flex items-center gap-x-3"
@@ -11,7 +12,10 @@ const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <div>Designed &amp; Built by Nathaniel Hussein</div>
+          <div>
+            Designed &amp; Built by Nathaniel Hussein ©️{' '}
+            {format(new Date(), 'yyyy')}
+          </div>
           <div className="github-stats flex items-center gap-x-2 ">
             <span>
               <CustomSVGIcon name="star" className="!w-4 !h-4" />

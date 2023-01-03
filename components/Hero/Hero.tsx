@@ -32,12 +32,12 @@ const HeroComponent = () => {
         </div>
       </div>
       <div className="fadeup-enter-done transition delay-300">
-        <h3 className=" text-6xl font-bold big-heading text-light_slate">
+        <h3 className=" text-5xl font-bold big-heading text-light_slate">
           I build things for the web.
         </h3>
       </div>
       <div className="fadeup-enter-done transition delay-400 my-5 w-full text-xs lg:text-base lg:w-3/5 tracking-wide leading-6">
-        <p className="text-slate">
+        <p className="text-slate text-sm">
           Software engineer looking for full-time opportunities in businesses
           where I can make my most contribution. I&apos;m a passionate and
           hard-working individual who is dedicated to improving himself in all
@@ -47,7 +47,7 @@ const HeroComponent = () => {
       </div>
       <div className="fadeup-enter-done transition duration-500 my-10">
         <a
-          className="email-link text-accent bg-transparent border border-accent rounded-sm lg:rounded-lg px-4 lg:px-10 py-2 lg:py-4 leading-4 cursor-pointer hover:bg-accent/5"
+          className="email-link text-accent bg-transparent border border-accent rounded-sm lg:rounded-lg px-4 lg:px-8 py-2 lg:py-3 leading-4 cursor-pointer hover:bg-accent/5"
           href="https://www.newline.co/courses/build-a-spotify-connected-app"
           target="_blank"
           rel="noreferrer"

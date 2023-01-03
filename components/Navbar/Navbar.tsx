@@ -1,5 +1,11 @@
 import React, { useRef } from 'react';
-import { useScroll, useSpring, motion, useCycle } from 'framer-motion';
+import {
+  useScroll,
+  useSpring,
+  motion,
+  useCycle,
+  AnimatePresence,
+} from 'framer-motion';
 import { useDimensions } from '../../hooks/useDimensions';
 import { Navigation } from './Navigation';
 import { MenuToggle } from './MenuToggle';
@@ -30,6 +36,7 @@ const Navbar = () => {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
+    duration: 10,
   });
 
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -51,11 +58,11 @@ const Navbar = () => {
       </div>
       <header className="w-full py-4 sm:py-2 ">
         <div className="flex px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="w-full flex  items-center justify-between">
+          <div className="w-full flex  items-center justify-between ">
             <div className="shrink-0">
               <a href="#" title="logo" className="flex">
                 <img
-                  className="w-auto h-10 md:h-16"
+                  className="w-auto h-10 md:h-16 "
                   src="/images/letter-n-2-logo.svg"
                   alt=""
                 />
@@ -149,7 +156,11 @@ const Navbar = () => {
                 ref={containerRef}
               >
                 <MenuToggle toggle={() => toggleOpen()} />
-                <Navigation />
+                {
+                  // isOpen && (
+                  <Navigation />
+                  // )
+                }
               </motion.nav>
             </div>
           </div>
