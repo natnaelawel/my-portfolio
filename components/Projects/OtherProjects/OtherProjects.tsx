@@ -7,39 +7,55 @@ const OtherProjects = (props: Props) => {
   const otherProjects = [
     {
       id: '1',
-      title: ' Integrating Algolia Search with WordPress Multisite',
+      title: 'Responsible for API design and development of the Services',
       site_link: '',
       repo_link: '',
       descriptions: [
-        'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+        'HakimHub is a platform that provides information about healthcare and hospitals. With a few clicks, HakimHub also allows you to filter doctors by their respective subspeciality, experience, and location.',
       ],
-      techs: ['ReactJS', 'NextJS', 'Nodejs', 'Git', 'MongoDB'],
+      techs: [
+        'Typescript',
+        'Nodejs',
+        'Nestjs',
+        'Git',
+        'MongoDB',
+        'Docker',
+        'GCP',
+      ],
     },
     {
       id: '2',
-      title: ' Integrating Algolia Search with WordPress Multisite',
-      site_link: '',
+      title: 'Building a beautiful, fast, user friendly webpages',
+      site_link: 'https://www.alphabettrading.com/',
       repo_link: '',
       descriptions: [
-        'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
-      ],
-      techs: ['ReactJS', 'NextJS', 'Apollo Client', 'Git', 'SEO', 'Agile'],
-    },
-    {
-      id: '3',
-      title: ' Integrating Algolia Search with WordPress Multisite',
-      site_link: '',
-      repo_link: '',
-      descriptions: [
-        'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
+        'It is a web application for the company called Alphabet Trading, which is a coffee export firm based in its place of origin.',
       ],
       techs: [
         'ReactJS',
-        'NodeJS',
-        'DynamoDB',
+        'NextJS',
+        'Apollo Client',
         'Git',
-        'AWS lambda',
-        'Serverless',
+        'SEO',
+        'Agile',
+        'Scrum',
+      ],
+    },
+    {
+      id: '3',
+      title: 'Building a 100% decentralized ecosystem(DeFi)',
+      site_link: '',
+      repo_link: '',
+      descriptions: [
+        'Monarch is building a 100% decentralized ecosystem that bridges the knowledge gap between DeFi protocols and makes DeFi easy by bringing the best protocols together in one place.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Tailwindcss',
+        'Typescript',
+        'Web3JS',
+        'Blockchain',
       ],
     },
     {
@@ -61,6 +77,23 @@ const OtherProjects = (props: Props) => {
         'Designed, developed, and tested the backend and interact with mobile and web teams.',
       ],
       techs: ['ReactJS', 'NodeJS', 'Flask', 'AES', 'Encryption', 'Git'],
+    },
+    {
+      id: '6',
+      title: 'Builting a Co-parenting App',
+      site_link: '',
+      repo_link: '',
+      descriptions: [
+        'Built a system that does provide all the resources required to facilitate co-parenting. Using React, Next.js, Node.js and AWS lambda, I helped construct both the frontend and the backend components.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'NodeJS',
+        'AWS lambda',
+        'Serverless Framework',
+        'Bitbucket',
+      ],
     },
   ];
 
@@ -99,7 +132,7 @@ const OtherProjects = (props: Props) => {
           return (
             <li
               key={project.id}
-              className="projects__StyledProject-sc-1v1fime-1 relative hover:transform translate-x-5 cursor-pointer"
+              className="relative hover:transform translate-x-5 cursor-pointer min-h-full w-full "
               style={{
                 transition:
                   'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s',
@@ -116,9 +149,9 @@ const OtherProjects = (props: Props) => {
                   borderRadius: 'var(--border-radius)',
                   transition: 'var(--transition)',
                 }}
-                className="project-inner flex flex-col items-start relative overflow-auto justify-center px-8 py-4 h-full bg-light_navy hover:-translate-y-4"
+                className="project-inner flex flex-col items-start relative overflow-auto  px-8 py-4 h-full bg-light_navy hover:-translate-y-4"
               >
-                <header>
+                <header className="flex-1">
                   <div className="project-top flex justify-between items-center my-1 mb-4">
                     <div className="folder">
                       <a
@@ -159,11 +192,11 @@ const OtherProjects = (props: Props) => {
                   </h3>
                   <div className="project-description text-xs my-2">
                     {project.descriptions?.map((desc, index) => {
-                      return <p key={desc}>{project.descriptions}</p>;
+                      return <p key={desc}>{desc}</p>;
                     })}
                   </div>
                 </header>
-                <footer className="self-end">
+                <footer className="self-end justify-self-end">
                   <ul className="project-tech-list flex items-center font-mono !text-xs gap-x-3 my-5 flex-wrap">
                     {project.techs.map((tech, index) => {
                       return <li key={tech}>{tech}</li>;

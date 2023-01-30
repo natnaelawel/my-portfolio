@@ -48,6 +48,20 @@ const Experience = () => {
     },
     {
       id: 4,
+      title: 'Freelancing',
+      company: 'Freelancing: (Upwork, Freelancer, etc)',
+      location: '',
+      from: 'Jun 2021',
+      to: 'Dec 2021',
+      descriptions: [
+        'Built RESTful APIs that served data to the JavaScript front-end based on dynamically chosen user inputs that handled over 500,000 concurrent users.',
+        'Designed and coded 1,000+ unit and integration tests using Jest and Proficient methodology.',
+        'Responsible for API design and development of RESTful Services for the enterprise products in the business.',
+        'Collaborate with the app development team, including the project manager, developers, and quality assurance specialist, to identify problems, testing methods, and best practices.',
+      ],
+    },
+    {
+      id: 5,
       title: 'Backend Developer Intern',
       company: 'Eskalate LLC',
       location: 'California, USA',
@@ -77,14 +91,23 @@ const Experience = () => {
           'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
       }}
     >
-      <h2 className=" flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
+      <h2 className=" flex my-2 py-5 relative font-semibold items-center text-base md:text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-14 sm:after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         Where I&apos;ve Worked
       </h2>
-      <div className="inner flex flex-col lg:flex-row min-h-max gap-x-5 gap-y-5 text-sm">
-        <div
+      <div className=" flex flex-col lg:flex-row min-h-max gap-x-5 gap-y-5 text-sm">
+        <motion.div
           role="tablist"
           aria-label="Job tabs"
-          className="relative flex flex-row lg:flex-col items-center md:items-start justify-start w-full lg:w-max h-10 md:h-max overscroll-x-auto !text-xs py-2"
+          className=" relative flex flex-row lg:flex-col items-center md:items-start justify-start w-full lg:w-max h-10 md:h-max overscroll-x-auto !text-xs py-2 overflow-x-auto no-scrollbar"
+          initial={{
+            x: '-500px',
+          }}
+          animate={{
+            x: '0px',
+          }}
+          transition={{
+            duration: 0.6,
+          }}
         >
           {experiences.map((experience: any, index: number) => {
             return (
@@ -96,7 +119,7 @@ const Experience = () => {
                 aria-selected="true"
                 aria-controls={`panel-${experience.id}`}
                 className={clsx(
-                  'w-full text-start border-b-2 lg:border-b-0 h-10 text-[12px] lg:text-sm lg:border-l-2 border-lightest_navy text-slate  flex items-center bg-transparent hover:text-accent hover:bg-accent/5 px-2 lg:px-5 py-1 lg:py-3',
+                  'w-full min-w-max text-start border-b-2 lg:border-b-0 h-10 text-[12px] lg:text-sm lg:border-l-2 border-lightest_navy text-slate  flex items-center bg-transparent hover:text-accent hover:bg-accent/5 px-2 lg:px-5 py-1 lg:py-3',
                   activeExp.id === experience.id &&
                     '!text-accent !border-accent'
                 )}
@@ -106,52 +129,67 @@ const Experience = () => {
             );
           })}
           <div className=""></div>
-        </div>
-        <div className="w-full max-w-[600px] min-h-[300px] py-5 p-auto text-[15px] flex-wrap px-4">
+        </motion.div>
+        <motion.div
+          transition={{
+            duration: 0.6,
+          }}
+          initial={{
+            x: '500px',
+          }}
+          animate={{
+            x: '0px',
+          }}
+          className="w-full max-w-[600px] min-h-[300px] py-5 p-auto text-[15px] flex-wrap md:px-4"
+        >
           <AnimatePresence mode="wait">
-            {activeExp && (
-              <motion.div
-                id={`panel-${activeExp.id}`}
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -10, opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h3 className="my-1 font-semibold leading-5 text-xl ">
-                  <span>{activeExp.title}</span>
-                  <span className="company transition text-accent relative">
-                    &nbsp;@&nbsp;
-                    <a
-                      href="https://www.upstatement.com/"
-                      className="inline-link transition text-accent relative"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {activeExp.company}
-                    </a>
-                  </span>
-                </h3>
-                <p className="range">
-                  {activeExp.from} - {activeExp.to}
-                </p>
-                <div>
-                  <ul className="flex flex-col flex-wrap max-w-full px-5">
-                    {activeExp.descriptions.map(
-                      (desc: string, index: number) => (
-                        <li
-                          key={desc}
-                          className="flex my-1 items-start justify-between before:my-1 relative before:content-['▹'] before:absolute before:text-accent before:text-xl before:leading-3 before:-ml-5"
-                        >
-                          {desc}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              </motion.div>
-            )}
+            {experiences.map((exp, index) => {
+              return activeExp.id === exp.id ? (
+                <motion.div
+                  id={`panel-${exp.id}`}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h3 className="my-1 font-semibold leading-5 text-base md:text-xl ">
+                    <span>{activeExp.title}</span>
+                    <span className="company transition text-accent relative">
+                      &nbsp;@&nbsp;
+                      <a
+                        href="https://www.upstatement.com/"
+                        className="inline-link transition text-accent relative"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {activeExp.company}
+                      </a>
+                    </span>
+                  </h3>
+                  <p className="range">
+                    {activeExp.from} - {activeExp.to}
+                  </p>
+                  <div className="text-xs ">
+                    <ul className="flex flex-col flex-wrap max-w-full px-5">
+                      {activeExp.descriptions.map(
+                        (desc: string, index: number) => (
+                          <li
+                            key={desc}
+                            className="text-justify sm:text-auto flex my-1 items-start justify-between before:my-1 relative before:content-['▹'] before:absolute before:text-accent before:text-xl before:leading-3 before:-ml-5"
+                          >
+                            {desc}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                </motion.div>
+              ) : (
+                <></>
+              );
+            })}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

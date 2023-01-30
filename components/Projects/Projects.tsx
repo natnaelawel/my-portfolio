@@ -9,99 +9,149 @@ const Projects = (props: Props) => {
   const projects = [
     {
       id: '1',
-      title: 'Monarch',
-      href: 'https://thorstarter-three.vercel.app/',
-      img: '/images/projects/monarch-1.png',
+      title: 'A2SV Portal',
+      href: 'https://portal.a2sv.org/',
+      img: '/images/projects/portal_group.png',
       description: (
-        <p>
-          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
-          more. Available on{' '}
+        <p className="flex flex-wrap justify-end">
+          It is a portal system that aims to simplify internal working
+          procedures like tracking student progress, as well as automating
+          communication within our company. I&apos;m responsible for developing a
+          responsive web app for A2SV portal based on &nbsp;
           <a
             className="text-accent"
-            href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
+            href="https://reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visual Studio Marketplace
+            ReactJS
           </a>
-          ,{' '}
+          ,&nbsp;
           <a
             className="text-accent"
-            href="https://packagecontrol.io/packages/Halcyon%20Theme"
+            href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Package Control
+            NextJS
           </a>
-          ,{' '}
+          ,&nbsp;
           <a
-            href="https://atom.io/themes/halcyon-syntax"
+            className="text-accent"
+            href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Atom Package Manager
+            Tailwindcss
           </a>
-          , and{' '}
+          ,&nbsp;
           <a
-            href="https://www.npmjs.com/package/hyper-halcyon-theme"
+            className="text-accent"
+            href="https://www.apollographql.com/docs/react/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            npm
+            Apollo Client
+          </a>
+          ,&nbsp;
+          <a
+            className="text-accent"
+            href="https://graphql.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GraphQL
           </a>
           .
         </p>
       ),
       repo: 'https://github.com/bchiang7/halcyon-site',
-      techs: ['ReactJS', 'NextJS', 'Web3'],
+      techs: ['ReactJS', 'NextJS', 'Tailwindcss', 'Docker', 'Agile', 'Scrum'],
     },
     {
       id: '2',
-      title: 'Mintplex',
+      title: 'Sekanson',
       href: 'https://halcyon-theme.netlify.com/',
       img: '/images/projects/monarch-1.png',
       description: (
-        <p>
-          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
-          more. Available on{' '}
+        <p className="flex flex-wrap justify-start">
+          Sekanson is a web application that has all the tools to help you
+          launch and grow your
+          <a
+            className="text-accent inline-flex"
+            href="https://opensea.io/learn/what-are-nfts"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NFT{' '}
+          </a>
+          &nbsp;project from the very first mint & beyond. I was responsible for
+          designing, developing the frontend part of the application, and as
+          well as integrating the app with the backend and
           <a
             className="text-accent"
-            href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
+            href="https://www.ibm.com/topics/smart-contracts"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visual Studio Marketplace
+            &nbsp;smart contract,
           </a>
-          ,{' '}
+          &nbsp; I built the app using
           <a
             className="text-accent"
-            href="https://packagecontrol.io/packages/Halcyon%20Theme"
+            href="https://reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Package Control
+            ReactJS
           </a>
-          ,{' '}
+          ,&nbsp;
           <a
-            href="https://atom.io/themes/halcyon-syntax"
+            className="text-accent"
+            href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Atom Package Manager
+            NextJS
           </a>
-          , and{' '}
+          ,&nbsp;
           <a
-            href="https://www.npmjs.com/package/hyper-halcyon-theme"
+            className="text-accent"
+            href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            npm
+            Tailwindcss
           </a>
-          .
+          ,&nbsp;
+          <a
+            className="text-accent"
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Typescript
+          </a>
+          ,&nbsp;
+          <a
+            className="text-accent"
+            href="https://thirdweb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thirdweb.
+          </a>
         </p>
       ),
       repo: 'https://github.com/bchiang7/halcyon-site',
-      techs: ['ReactJS', 'NextJS', 'Web3'],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Tailwindcss',
+        'Web3',
+        'EthersJS',
+        'Smart Contract',
+      ],
     },
     {
       id: '3',
@@ -109,43 +159,56 @@ const Projects = (props: Props) => {
       href: 'https://nft-proj.vercel.app/dapp',
       img: '/images/projects/monarch-2.png',
       description: (
-        <p>
-          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
-          more. Available on{' '}
+        <p className="flex flex-wrap justify-end">
+          Monarch is building a 100% decentralized ecosystem that bridges the
+          knowledge gap between DeFi protocols and makes DeFi easy by bringing
+          the best protocols together in one place. The Kingmaker is our project
+          incubator where we build, fund and launch the most promising projects
+          in
           <a
             className="text-accent"
-            href="https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode"
+            href="https://www.coinbase.com/learn/crypto-basics/what-is-defi"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visual Studio Marketplace
+            DeFi.
           </a>
-          ,{' '}
+          &nbsp; I was responsible for building the frontend part using
           <a
             className="text-accent"
-            href="https://packagecontrol.io/packages/Halcyon%20Theme"
+            href="https://reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Package Control
+            ReactJS
           </a>
-          ,{' '}
+          ,&nbsp;
           <a
-            href="https://atom.io/themes/halcyon-syntax"
+            className="text-accent"
+            href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Atom Package Manager
+            NextJS
           </a>
-          , and{' '}
+          ,&nbsp;
           <a
-            href="https://www.npmjs.com/package/hyper-halcyon-theme"
+            className="text-accent"
+            href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            npm
+            Tailwindcss
           </a>
-          .
+          ,&nbsp;
+          <a
+            className="text-accent"
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Typescript
+          </a>
         </p>
       ),
       repo: 'https://github.com/bchiang7/halcyon-site',
@@ -155,16 +218,16 @@ const Projects = (props: Props) => {
 
   return (
     <section id="jobs" className="w-11/12 lg:w-3/4 px-5 lg:px-10 my-5 py-5">
-      <h2 className="numbered-heading flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
+      <h2 className="numbered-heading flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after-w-10 md:after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         Some Things I&apos;ve Built
       </h2>
-      <ul className=" flex flex-col lg:gap-y-24 text-sm">
+      <ul className=" flex flex-col lg:gap-y-24 text-sm ">
         {projects.map((project, index) => {
           return index % 2 === 0 ? (
             <SlideWrapper key={project.id} from="right">
               <li
                 key={project.id}
-                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center"
+                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center "
                 data-sr-id="4"
                 style={{
                   transform:
@@ -174,7 +237,7 @@ const Projects = (props: Props) => {
                 }}
               >
                 <div
-                  className="project-image z-10 relative w-[600px]  min-w-[300px]"
+                  className="hidden md:flex project-image z-10 relative md:w-[600px]  md:min-w-[300px] "
                   style={{
                     boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                     transition: 'var(--transition)',
@@ -240,12 +303,8 @@ const Projects = (props: Props) => {
                     </div>
                   </a>
                 </div>
-                <div
-                  className="project-content relative gap-y-3 flex flex-col items-end text-right"
-                  style={{
-                    gridArea: '1/6/-1/-1',
-                  }}
-                >
+
+                <div className="w-full project-content relative gap-y-3 flex flex-col items-end text-right col-span-12 sm:[gridArea:1/6/-1/-1]">
                   <p className="project-overline  text-accent text-sm font-mono">
                     Featured Project
                   </p>
@@ -259,7 +318,7 @@ const Projects = (props: Props) => {
                     </a>
                   </h3>
                   <div
-                    className="project-description relative z-20 rounded-lg min-w-[300px]"
+                    className="w-full md:w-auto flex flex-col flex-wrap project-description relative z-20 rounded-lg md:min-w-[300px]"
                     style={{
                       boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                       transition: 'var(--transition)',
@@ -274,7 +333,7 @@ const Projects = (props: Props) => {
                   >
                     {project.description}
                   </div>
-                  <ul className="project-tech-list my-5 flex gap-x-2 tracking-tighter text-xs max-w-md self-end text-right flex-wrap justify-end relative mx-2 z-20 font-mono">
+                  <ul className=" project-tech-list my-5 flex gap-x-2 tracking-tighter text-xs max-w-md self-end text-right flex-wrap justify-end relative mx-2 z-20 font-mono">
                     {project.techs?.map((tech, index) => {
                       return (
                         <li
@@ -286,7 +345,7 @@ const Projects = (props: Props) => {
                       );
                     })}
                   </ul>
-                  <div className=" project-links text-lightest_slate my-3 flex justify-end items-center gap-x-2">
+                  <div className="project-links text-lightest_slate my-3 flex justify-end items-center gap-x-2">
                     <a
                       href={project.repo}
                       aria-label="GitHub Link"
@@ -320,12 +379,7 @@ const Projects = (props: Props) => {
                     'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
                 }}
               >
-                <div
-                  className="project-content relative gap-y-3 w-[600px]"
-                  style={{
-                    gridArea: '1/1/-1/ 7',
-                  }}
-                >
+                <div className=" w-full project-content relative gap-y-3 md:w-[600px] md:[gridArea:1/1/-1/ 7]">
                   <p className="project-overline  text-accent text-sm font-mono">
                     Featured Project
                   </p>
@@ -354,13 +408,10 @@ const Projects = (props: Props) => {
                   >
                     {project.description}
                   </div>
-                  <ul className="project-tech-list text-xs my-5 flex gap-x-2 tracking-tighter flex-wrap relative mx-2 z-20 font-mono">
+                  <ul className="project-tech-list  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
                     {project.techs?.map((tech, index) => {
                       return (
-                        <li
-                          key={tech}
-                          className="mx-1 text-slate whitespace-nowrap"
-                        >
+                        <li key={tech} className="mx-1 text-slate">
                           {tech}
                         </li>
                       );
@@ -387,7 +438,7 @@ const Projects = (props: Props) => {
                   </div>
                 </div>
                 <div
-                  className="project-image w-full h-full z-0 relative "
+                  className="hidden md:flex project-image w-full h-full z-0 relative "
                   style={{
                     boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                     transition: 'var(--transition)',
@@ -411,7 +462,7 @@ const Projects = (props: Props) => {
                       <div
                         className={clsx('relative h-full', styles.wrapper__img)}
                       >
-                        <div className="absolute block -z-20 top-0 left-0 min-w-[500px] border  h-full w-full object-cover ">
+                        <div className="absolute block -z-20 top-0 left-0 min-w-[500px] h-full w-full object-cover ">
                           <img
                             alt=""
                             role="presentation"

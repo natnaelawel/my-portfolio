@@ -5,10 +5,10 @@ import CustomSVGIcon from '../../utils/getSVG';
 const Footer = () => {
   return (
     <footer className="w-full flex justify-center items-center min-h-[70px] mt-10 text-sm font-mono">
-      <div className="flex items-center -tracking-widest text-xs">
+      <div className="flex w-full flex-col md:flex-row items-center -tracking-widest text-xs justify-center px-5">
         <a
           className="flex items-center gap-x-3"
-          href="https://github.com/bchiang7/v4"
+          href="https://github.com/natnaelawel/my-portfolio"
           rel="noopener noreferrer"
           target="_blank"
         >

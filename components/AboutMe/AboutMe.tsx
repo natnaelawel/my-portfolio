@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styles from './aboutme.module.css';
+import { motion } from 'framer-motion';
 type Props = {};
 
 const AboutMe = (props: Props) => {
@@ -9,6 +10,7 @@ const AboutMe = (props: Props) => {
     'NextJS',
     'NodeJS',
     'NestJS',
+    'VueJS',
     'Cypress',
     'Jest',
   ];
@@ -32,13 +34,15 @@ const AboutMe = (props: Props) => {
     'Docker',
     'Agile',
     'Scrum',
+    'Blockchain',
+    'Web3',
     'Micro Services',
   ];
 
   return (
     <section
       id="about"
-      className="w-11/12 lg:w-3/4 px-5 my-5 py-5 text-sm"
+      className="w-11/12 lg:w-3/4 px-5 md:my-5 py-5 text-sm "
       data-sr-id="0"
       style={{
         visibility: 'visible',
@@ -48,11 +52,26 @@ const AboutMe = (props: Props) => {
           'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
       }}
     >
-      <h2 className="flex my-3 font-bold text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
+      <h2 className="flex my-3 font-bold text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-20 sm:after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         About Me
       </h2>
-      <div className="inner my-2 flex flex-col lg:flex-row gap-y-4 gap-x-6 justify-between items-start text-sm">
-        <div className=" my-2 w-full text-xs leading-5 lg:text-sm lg:w-3/5 lg:leading-5">
+      <div className="my-2 w-full flex flex-col justify-center items-start lg:flex-row gap-y-4 gap-x-6 lg:justify-between lg:items-start text-sm">
+        <motion.div
+          transition={{
+            duration: 1.2,
+            type: 'spring',
+            damping: 20,
+          }}
+          initial={{
+            x: '-1000px',
+            opacity: 0,
+          }}
+          animate={{
+            x: '0px',
+            opacity: 1,
+          }}
+          className=" my-2 w-full text-xs leading-5 lg:text-sm lg:w-3/5 lg:leading-5 "
+        >
           <div>
             <p>
               Hello! My name is Nathaniel and I enjoy creating things that live
@@ -118,8 +137,24 @@ const AboutMe = (props: Props) => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className="w-11/12 lg:w-2/5">
+        </motion.div>
+        <motion.div
+          transition={{
+            duration: 1.2,
+            type: 'spring',
+            damping: 20,
+          }}
+          initial={{
+            x: '1000px',
+          }}
+          whileInView={{
+            x: '10px',
+          }}
+          animate={{
+            x: '10px',
+          }}
+          className="w-11/12 lg:w-2/5 relative"
+        >
           <div
             style={{
               boxShadow: '0 10px 30px -15px var(--navy-shadow)',
@@ -171,7 +206,7 @@ const AboutMe = (props: Props) => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
