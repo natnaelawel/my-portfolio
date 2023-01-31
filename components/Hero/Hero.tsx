@@ -52,7 +52,7 @@ const HeroComponent = () => {
         opacity: 1,
       }}
       ref={ref}
-      className="px-2 w-4/5 lg:px-10 my-5 lg:my-10 py-5 lg:py-12 relative min-h-[700px]  overflow-hidden gap-y-2 sm:gap-y-5 md:gap-y-10 sm:pb-16 lg:pb-20 xl:pb-24"
+      className="px-2 w-3/4 lg:px-10 my-5 lg:my-10 py-5 lg:py-12 relative min-h-[700px]  overflow-hidden gap-y-2 sm:gap-y-5 md:gap-y-10 sm:pb-16 lg:pb-20 xl:pb-24"
     >
       <div className="fadeup-enter-done  transition delay-100 md:py-5 text-lg sm:text-xl text-accent">
         <h1 className="font-mono ">Hi, my name is</h1>

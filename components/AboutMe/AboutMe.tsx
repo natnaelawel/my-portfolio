@@ -63,11 +63,11 @@ const AboutMe = (props: Props) => {
             damping: 20,
           }}
           initial={{
-            x: '-1000px',
+            // x: '-1000px',
             opacity: 0,
           }}
-          animate={{
-            x: '0px',
+          whileInView={{
+            // x: '0px',
             opacity: 1,
           }}
           className=" my-2 w-full text-xs leading-5 lg:text-sm lg:w-3/5 lg:leading-5 "
@@ -140,19 +140,22 @@ const AboutMe = (props: Props) => {
         </motion.div>
         <motion.div
           transition={{
-            duration: 1.2,
-            type: 'spring',
-            damping: 20,
+            duration: 1.6,
           }}
           initial={{
-            x: '1000px',
+            // x: '1000px',
+            opacity: 0,
           }}
           whileInView={{
-            x: '10px',
+            // x: '10px',
+            opacity: 1,
           }}
-          animate={{
-            x: '10px',
+          exit={{
+            opacity: 0,
           }}
+          // animate={{
+          //   x: '10px',
+          // }}
           className="w-11/12 lg:w-2/5 relative"
         >
           <div

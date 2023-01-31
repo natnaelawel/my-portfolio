@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import styles from './experience.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Experience = () => {
@@ -13,9 +12,9 @@ const Experience = () => {
       from: 'May 2018',
       to: 'Present',
       descriptions: [
-        'Implemented full-stack applications across various platforms using the latest industry-adopted technologies and frameworks.',
-        'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis Studio Developer @ Scout',
-        'Used React JS and Next JS to develop solutions.',
+        'Responsible for developing a responsive web app for A2SV portal based on ReactJS, NextJS, Apollo Client, GraphQL',
+        'Worked on optimizing the website pages with SEO best practice in order to make them as optimized as possible, and attained a top ranking on Google.',
+        'Working in the agile/scrum development environment with frequently changing requirements and actively participating in scrum meetings and reviews. applications and software accurately.',
       ],
     },
     {
@@ -81,7 +80,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-11/12 lg:w-3/5 px-4 lg:px-5 my-5 py-5 "
+      className="w-11/12 lg:w-3/4 px-4 lg:px-5 my-5 py-5  "
       data-sr-id="2"
       style={{
         visibility: 'visible',
@@ -94,11 +93,11 @@ const Experience = () => {
       <h2 className=" flex my-2 py-5 relative font-semibold items-center text-base md:text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-14 sm:after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         Where I&apos;ve Worked
       </h2>
-      <div className=" flex flex-col lg:flex-row min-h-max gap-x-5 gap-y-5 text-sm">
+      <div className=" flex flex-col lg:flex-row min-h-max gap-x-5 gap-y-5 text-sm justify-start">
         <motion.div
           role="tablist"
           aria-label="Job tabs"
-          className=" relative flex flex-row lg:flex-col items-center md:items-start justify-start w-full lg:w-max h-10 md:h-max overscroll-x-auto !text-xs py-2 overflow-x-auto no-scrollbar"
+          className=" relative flex flex-row lg:flex-col items-center md:items-start justify-start w-full lg:w-max h-10 md:h-max overscroll-x-auto !text-xs py-2 md:py-5 overflow-x-auto no-scrollbar"
           initial={{
             x: '-500px',
           }}
@@ -140,7 +139,7 @@ const Experience = () => {
           animate={{
             x: '0px',
           }}
-          className="w-full max-w-[600px] min-h-[300px] py-5 p-auto text-[15px] flex-wrap md:px-4"
+          className="w-full max-w-[700px]  min-h-[400px] py-5 p-auto text-[15px] flex-wrap md:px-4"
         >
           <AnimatePresence mode="wait">
             {experiences.map((exp, index) => {

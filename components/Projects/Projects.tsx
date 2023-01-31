@@ -13,134 +13,139 @@ const Projects = (props: Props) => {
       href: 'https://portal.a2sv.org/',
       img: '/images/projects/portal_group.png',
       description: (
-        <p className="flex flex-wrap justify-end">
-          It is a portal system that aims to simplify internal working
-          procedures like tracking student progress, as well as automating
-          communication within our company. I&apos;m responsible for developing a
-          responsive web app for A2SV portal based on &nbsp;
-          <a
-            className="text-accent"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ReactJS
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            NextJS
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwindcss
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://www.apollographql.com/docs/react/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Apollo Client
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://graphql.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GraphQL
-          </a>
-          .
+        <p className="flex flex-wrap text-right w-full flex-row">
+          <span className="">
+            It is a portal system that aims to simplify internal working
+            procedures like tracking student progress, as well as automating
+            communication within our company. I&apos;m responsible for
+            developing a responsive web app for A2SV portal based on &nbsp;
+            <a
+              className="text-accent inline"
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReactJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NextJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwindcss
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://www.apollographql.com/docs/react/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apollo Client
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://graphql.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GraphQL
+            </a>
+            .
+          </span>
         </p>
       ),
       repo: 'https://github.com/bchiang7/halcyon-site',
       techs: ['ReactJS', 'NextJS', 'Tailwindcss', 'Docker', 'Agile', 'Scrum'],
     },
+
     {
       id: '2',
       title: 'Sekanson',
       href: 'https://halcyon-theme.netlify.com/',
       img: '/images/projects/monarch-1.png',
       description: (
-        <p className="flex flex-wrap justify-start">
-          Sekanson is a web application that has all the tools to help you
-          launch and grow your
-          <a
-            className="text-accent inline-flex"
-            href="https://opensea.io/learn/what-are-nfts"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            NFT{' '}
-          </a>
-          &nbsp;project from the very first mint & beyond. I was responsible for
-          designing, developing the frontend part of the application, and as
-          well as integrating the app with the backend and
-          <a
-            className="text-accent"
-            href="https://www.ibm.com/topics/smart-contracts"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            &nbsp;smart contract,
-          </a>
-          &nbsp; I built the app using
-          <a
-            className="text-accent"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ReactJS
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            NextJS
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwindcss
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Typescript
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://thirdweb.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Thirdweb.
-          </a>
+        <p className="flex justify-start">
+          <span className="break-words max-w-full">
+            Sekanson is a web application that has all the tools to help you
+            launch and grow your
+            <a
+              className="text-accent inline-flex"
+              href="https://opensea.io/learn/what-are-nfts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp;NFT
+            </a>
+            &nbsp;project from the very first mint & beyond. I was responsible
+            for designing, developing the frontend part of the application, and
+            as well as integrating the app with the backend and
+            <a
+              className="text-accent inline-flex"
+              href="https://www.ibm.com/topics/smart-contracts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp;smart contract
+            </a>
+            , &nbsp; I built the app using &nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReactJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NextJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwindcss
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Typescript
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://thirdweb.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Thirdweb.
+            </a>
+          </span>
         </p>
       ),
       repo: 'https://github.com/bchiang7/halcyon-site',
@@ -160,55 +165,57 @@ const Projects = (props: Props) => {
       img: '/images/projects/monarch-2.png',
       description: (
         <p className="flex flex-wrap justify-end">
-          Monarch is building a 100% decentralized ecosystem that bridges the
-          knowledge gap between DeFi protocols and makes DeFi easy by bringing
-          the best protocols together in one place. The Kingmaker is our project
-          incubator where we build, fund and launch the most promising projects
-          in
-          <a
-            className="text-accent"
-            href="https://www.coinbase.com/learn/crypto-basics/what-is-defi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DeFi.
-          </a>
-          &nbsp; I was responsible for building the frontend part using
-          <a
-            className="text-accent"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ReactJS
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            NextJS
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwindcss
-          </a>
-          ,&nbsp;
-          <a
-            className="text-accent"
-            href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Typescript
-          </a>
+          <span>
+            Monarch is building a 100% decentralized ecosystem that bridges the
+            knowledge gap between DeFi protocols and makes DeFi easy by bringing
+            the best protocols together in one place. The Kingmaker is our
+            project incubator where we build, fund and launch the most promising
+            projects in&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://www.coinbase.com/learn/crypto-basics/what-is-defi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DeFi
+            </a>
+            .&nbsp; I was responsible for building the frontend part using&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReactJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NextJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwindcss
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Typescript
+            </a>
+          </span>
         </p>
       ),
       repo: 'https://github.com/bchiang7/halcyon-site',
@@ -225,9 +232,9 @@ const Projects = (props: Props) => {
         {projects.map((project, index) => {
           return index % 2 === 0 ? (
             <SlideWrapper key={project.id} from="right">
-              <li
+              {/* <li
                 key={project.id}
-                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center "
+                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center min-h-[400px] md:min-h-[500px]"
                 data-sr-id="4"
                 style={{
                   transform:
@@ -237,18 +244,16 @@ const Projects = (props: Props) => {
                 }}
               >
                 <div
-                  className="hidden md:flex project-image z-10 relative md:w-[600px]  md:min-w-[300px] "
+                  className="hidden md:flex project-image z-10 relative  md:min-w-[300px] justify-center md:w-[700px] md:[gridArea:1/1/-1/6]"
                   style={{
                     boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                     transition: 'var(--transition)',
-                    gridColumn: '1/8',
-                    gridArea: '1/ 1 / -1 / 7',
                   }}
                 >
                   <a
                     className={clsx(
                       styles.project_image__a,
-                      'w-full !h-full relative'
+                      'w-full'
                     )}
                     style={{
                       backgroundColor: 'var(--green)',
@@ -264,10 +269,10 @@ const Projects = (props: Props) => {
                         boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                         transition: 'var(--transition)',
                       }}
-                      className={clsx(styles.wrapper)}
+                      className={clsx(styles.wrapper, "h-fit")}
                     >
-                      <div className={clsx('relative', styles.wrapper__img)}>
-                        <div className="absolute z-20 top-0 left-0 ">
+                      <div className={clsx('relative', styles.wrapper__img, "aspect-video")}>
+                        <div className="absolute z-20 inset-0">
                           <img
                             alt=""
                             role="presentation"
@@ -293,8 +298,9 @@ const Projects = (props: Props) => {
                             objectFit: 'cover',
                           }}
                         ></div>
-                        <img
-                          className="h-full w-full object-cover"
+                        <Image
+                          fill
+                          className="h-full w-full object-cover min-h-full"
                           decoding="async"
                           src={project.img}
                           alt={project.title}
@@ -365,12 +371,9 @@ const Projects = (props: Props) => {
                     </a>
                   </div>
                 </div>
-              </li>
-            </SlideWrapper>
-          ) : (
-            <SlideWrapper key={project.id} from="left">
+              </li> */}
               <li
-                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center"
+                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center  min-h-[400px] md:min-h-[500px] "
                 data-sr-id="4"
                 style={{
                   transform:
@@ -379,7 +382,7 @@ const Projects = (props: Props) => {
                     'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
                 }}
               >
-                <div className=" w-full project-content relative gap-y-3 md:w-[600px] md:[gridArea:1/1/-1/ 7]">
+                <div className=" w-full project-content relative gap-y-3 md:w-[600px] [gridArea:1/7/-1/-1] flex flex-col items-end">
                   <p className="project-overline  text-accent text-sm font-mono">
                     Featured Project
                   </p>
@@ -394,6 +397,139 @@ const Projects = (props: Props) => {
                   </h3>
                   <div
                     className="project-description relative z-20 rounded-lg min-w-[300px] "
+                    style={{
+                      boxShadow: '0 10px 30px -15px var(--navy-shadow)',
+                      transition: 'var(--transition)',
+                      position: 'relative',
+                      zIndex: 20,
+                      padding: '25px',
+                      borderRadius: 'var(--border-radius)',
+                      backgroundColor: 'var(--light-navy)',
+                      color: 'var(--light-slate)',
+                      fontSize: 'var(--fz-lg)',
+                    }}
+                  >
+                    {project.description}
+                  </div>
+                  <ul className="project-tech-list justify-end  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
+                    {project.techs?.map((tech, index) => {
+                      return (
+                        <li key={tech} className="mx-1 text-slate">
+                          {tech}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <div className="project-links text-lightest_slate my-3 flex items-center gap-x-2">
+                    <a
+                      href={project.repo}
+                      aria-label="GitHub Link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <CustomSVGIcon className="" name="github" />
+                    </a>
+                    <a
+                      href={project.href}
+                      aria-label="External Link"
+                      className="external"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <CustomSVGIcon className="" name="external-link" />
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="hidden md:flex project-image z-0 relative [gridArea:1/1/-1/8]"
+                  style={{
+                    boxShadow: '0 10px 30px -15px var(--navy-shadow)',
+                    transition: 'var(--transition)',
+                    gridArea: '',
+                  }}
+                >
+                  <a
+                    className={clsx('h-full', styles.project_image__a)}
+                    href="https://halcyon-theme.netlify.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      style={{
+                        boxShadow: '0 10px 30px -15px var(--navy-shadow)',
+                        transition: 'var(--transition)',
+                      }}
+                      className={clsx(styles.wrapper)}
+                    >
+                      <div
+                        className={clsx('relative h-full', styles.wrapper__img)}
+                      >
+                        <div className="absolute block -z-20 top-0 left-0 min-w-[300px] h-full w-full object-cover ">
+                          <img
+                            alt=""
+                            role="presentation"
+                            aria-hidden="true"
+                            src="data:image/svg+xml;charset=utf-8,%3Csvg height='450' width='450' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                            style={{
+                              maxWidth: '100%',
+                              display: 'block',
+                              position: 'static',
+                            }}
+                          />
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          data-placeholder-image=""
+                          style={{
+                            opacity: 0,
+                            transition: 'opacity 500ms linear 0s',
+                            backgroundColor: 'rgb(232, 232, 232)',
+                            position: 'absolute',
+                            inset: '0px',
+                            objectFit: 'cover',
+                          }}
+                        ></div>
+                        <img
+                          className="max-w-full h-full w-full object-cover block static"
+                          // width="450px"
+                          // height="450px"
+                          decoding="async"
+                          src={project.img}
+                          alt="Headshot"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </SlideWrapper>
+          ) : (
+            <SlideWrapper key={project.id} from="left">
+              <li
+                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center  min-h-[400px] md:min-h-[500px]"
+                data-sr-id="4"
+                style={{
+                  transform:
+                    'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)',
+                  transition:
+                    'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
+                }}
+              >
+                <div className=" w-full project-content relative gap-y-3 min-w-[300px] md:w-[600px] [gridArea:1/1/-1/7] ">
+                  <p className="project-overline  text-accent text-sm font-mono">
+                    Featured Project
+                  </p>
+                  <h3 className="project-title text-lightest_slate font-semibold my-3 hover:text-accent text-2xl hover:font-bold">
+                    <a
+                      href={project.href}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {project.title}
+                    </a>
+                  </h3>
+                  <div
+                    className="project-description relative z-20 rounded-lg min-w-[300px] h-full"
                     style={{
                       boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                       transition: 'var(--transition)',
@@ -438,12 +574,10 @@ const Projects = (props: Props) => {
                   </div>
                 </div>
                 <div
-                  className="hidden md:flex project-image w-full h-full z-0 relative "
+                  className="hidden md:flex project-image z-0 relative [gridArea:1/6/-1/-1]"
                   style={{
                     boxShadow: '0 10px 30px -15px var(--navy-shadow)',
                     transition: 'var(--transition)',
-                    // gridColumn: "1/12",
-                    gridArea: '1/6/-1/-1',
                   }}
                 >
                   <a
@@ -462,7 +596,7 @@ const Projects = (props: Props) => {
                       <div
                         className={clsx('relative h-full', styles.wrapper__img)}
                       >
-                        <div className="absolute block -z-20 top-0 left-0 min-w-[500px] h-full w-full object-cover ">
+                        <div className="absolute block -z-20 inset-0 min-w-[500px] h-full w-full object-cover">
                           <img
                             alt=""
                             role="presentation"
@@ -488,11 +622,11 @@ const Projects = (props: Props) => {
                           }}
                         ></div>
                         <img
-                          className="max-w-full h-full w-full object-cover block static"
+                          className="max-w-full h-full w-full object-cover"
                           // width="450px"
                           // height="450px"
                           decoding="async"
-                          src="/images/projects/mintplex-1.png"
+                          src={project.img}
                           alt="Headshot"
                         />
                       </div>
