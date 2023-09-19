@@ -63,20 +63,10 @@ const OtherProjects = (props: Props) => {
     {
       id: '4',
       title: 'Zemastore (Senior-year-project)',
-      site_link: '',
-      repo_link: '',
+      site_link: 'https://github.com/ZemaStore/ZemaStore',
+      repo_link: 'https://github.com/ZemaStore/ZemaStore',
       descriptions: [
         'Built a tool to enhances artists’ revenue for their work and handles copyright issues.',
-      ],
-      techs: ['ReactJS', 'NodeJS', 'Flask', 'AES', 'Encryption', 'Git'],
-    },
-    {
-      id: '5',
-      title: 'Hakim Hub (Internship Project)',
-      site_link: '',
-      repo_link: '',
-      descriptions: [
-        'Designed, developed, and tested the backend and interact with mobile and web teams.',
       ],
       techs: ['ReactJS', 'NodeJS', 'Flask', 'AES', 'Encryption', 'Git'],
     },
@@ -101,7 +91,7 @@ const OtherProjects = (props: Props) => {
       id: '7',
       title: "Staking Game (E-commerce site's)",
       site_link: 'https://staking-game-frontend.vercel.app/dashboard',
-      repo_link: '',
+      repo_link: 'https://staking-game-frontend.vercel.app/dashboard',
       descriptions: [
         'Staking Game is a platform that provides information about healthcare and hospitals. With a few clicks, HakimHub also allows you to filter doctors by their respective subspeciality, experience, and location.',
       ],
@@ -118,7 +108,7 @@ const OtherProjects = (props: Props) => {
       id: '8',
       title: "Bot shop (E-commerce site's)",
       site_link: 'https://bot-shop-site.vercel.app/',
-      repo_link: '',
+      repo_link: 'https://bot-shop-site.vercel.app/',
       descriptions: [
         'Bot shop is an e-commerce site that sells different types of bots. It is a full-stack application that is built with React, Next.js, Node.js, and MongoDB.',
       ],
@@ -128,7 +118,7 @@ const OtherProjects = (props: Props) => {
       id: '9',
       title: "SmartChain Poker (Blockchain's)",
       site_link: 'https://nftminting-seven.vercel.app/',
-      repo_link: '',
+      repo_link: 'https://nftminting-seven.vercel.app/',
       descriptions: [
         'SmartChain Poker is a decentralized application that allows users to play poker with their friends. It is built with React, Next.js, Node.js, and Solidity.',
       ],
@@ -145,7 +135,7 @@ const OtherProjects = (props: Props) => {
       id: '10',
       title: "NFT-FI (Blockchain's)",
       site_link: 'https://loan-shark-nft-fi.vercel.app/',
-      repo_link: '',
+      repo_link: 'https://loan-shark-nft-fi.vercel.app/',
       descriptions: [
         'NFT-FI is a decentralized application that allows users to borrow money against their NFTs. It is built with React, Next.js, Node.js, and Solidity.',
       ],

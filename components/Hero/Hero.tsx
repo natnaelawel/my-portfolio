@@ -151,7 +151,7 @@ const HeroComponent = () => {
         ></motion.div>
         <a
           className="relative email-link text-accent hover:text-navy  bg-navy border  rounded-sm lg:rounded-lg px-4 lg:px-8 py-2 lg:py-3 leading-4 cursor-pointer hover:bg-accent/75"
-          href=""
+          href="mailto:natnael.awel@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
