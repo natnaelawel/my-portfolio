@@ -9,6 +9,142 @@ const Projects = (props: Props) => {
   const projects = [
     {
       id: '1',
+      title: 'Lucid pictures website',
+      href: 'https://lucidpicturesplc.com/',
+      img: '/images/projects/Lucid Pictures.png',
+      description: (
+        <p className="flex flex-wrap text-right w-full flex-row">
+          <span className="">
+            It is a A premier video production company that brings your stories
+            to life. With a passion for creativity and a commitment to
+            excellence, we specialize in crafting compelling visual narratives
+            that captivate audiences.
+            <br />
+            <a
+              className="text-accent inline"
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReactJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NextJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwindcss
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://github.com/locomotivemtl/locomotive-scroll/tree/v5-beta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Locomotive Scroll
+            </a>
+            .
+          </span>
+        </p>
+      ),
+      repo: '#',
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Tailwindcss',
+        'Locomotive Scroll',
+        'Docker',
+        'Agile',
+        'Scrum',
+      ],
+    },
+    {
+      id: '2',
+      title: 'Alphabet Trading website',
+      href: 'https://www.alphabettrading.com/',
+      img: '/images/projects/Alphabet Trading.png',
+      description: (
+        <p className="flex flex-wrap text-right w-full flex-row">
+          <span className="">
+            Alphabet Trading PLC was formally established in November 2019 by Mr
+            Henock Fikru to engage mainly in the export of agricultural goods
+            from Ethiopia. and has been focused on building relationships with
+            coffee producers and suppliers from the Southern and Western parts
+            of Ethiopia, in Sidama, Oromia and SNNP regions.
+            <br />
+            <a
+              className="text-accent inline"
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReactJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NextJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwindcss
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://github.com/locomotivemtl/locomotive-scroll/tree/v5-beta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Locomotive Scroll
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://github.com/locomotivemtl/locomotive-scroll/tree/v5-beta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              AWS Amplify
+            </a>
+            .
+          </span>
+        </p>
+      ),
+      repo: '#',
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Tailwindcss',
+        'Locomotive Scroll',
+        'Docker',
+        'Agile',
+        'Scrum',
+      ],
+    },
+    {
+      id: '3',
       title: 'A2SV Portal',
       href: 'https://portal.a2sv.org/',
       img: '/images/projects/portal_group.png',
@@ -63,6 +199,15 @@ const Projects = (props: Props) => {
             >
               GraphQL
             </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://gcp.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GCP
+            </a>
             .
           </span>
         </p>
@@ -70,12 +215,11 @@ const Projects = (props: Props) => {
       repo: 'https://github.com/bchiang7/halcyon-site',
       techs: ['ReactJS', 'NextJS', 'Tailwindcss', 'Docker', 'Agile', 'Scrum'],
     },
-
     {
-      id: '2',
+      id: '4',
       title: 'Sekanson',
-      href: 'https://halcyon-theme.netlify.com/',
-      img: '/images/projects/monarch-1.png',
+      href: 'https://mintplex.vercel.app/',
+      img: '/images/projects/Sekanson.png',
       description: (
         <p className="flex justify-start">
           <span className="break-words max-w-full">
@@ -159,10 +303,10 @@ const Projects = (props: Props) => {
       ],
     },
     {
-      id: '3',
-      title: 'Convex',
-      href: 'https://nft-proj.vercel.app/dapp',
-      img: '/images/projects/monarch-2.png',
+      id: '5',
+      title: 'Monarch',
+      href: 'https://thorstarter-three.vercel.app/',
+      img: '/images/projects/monarch-1.png',
       description: (
         <p className="flex flex-wrap justify-end">
           <span>
@@ -224,14 +368,14 @@ const Projects = (props: Props) => {
   ];
 
   return (
-    <section id="jobs" className="w-11/12 lg:w-3/4 px-5 lg:px-10 my-5 py-5">
+    <section id="projects" className="w-11/12 lg:w-3/4 px-5 lg:px-10 my-5 py-5">
       <h2 className="numbered-heading flex my-2 py-5 relative font-semibold items-center text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after-w-10 md:after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
         Some Things I&apos;ve Built
       </h2>
       <ul className=" flex flex-col lg:gap-y-24 text-sm ">
         {projects.map((project, index) => {
           return index % 2 === 0 ? (
-            <SlideWrapper key={project.id} from="right">
+            <SlideWrapper key={project.id + index} from="right">
               {/* <li
                 key={project.id}
                 className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center min-h-[400px] md:min-h-[500px]"
@@ -411,15 +555,15 @@ const Projects = (props: Props) => {
                   >
                     {project.description}
                   </div>
-                  <ul className="project-tech-list justify-end  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
+                  {/* <ul className="project-tech-list justify-end  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
                     {project.techs?.map((tech, index) => {
                       return (
-                        <li key={tech} className="mx-1 text-slate">
+                        <li key={tech + index} className="mx-1 text-slate">
                           {tech}
                         </li>
                       );
                     })}
-                  </ul>
+                  </ul> */}
                   <div className="project-links text-lightest_slate my-3 flex items-center gap-x-2">
                     <a
                       href={project.repo}
@@ -504,7 +648,7 @@ const Projects = (props: Props) => {
               </li>
             </SlideWrapper>
           ) : (
-            <SlideWrapper key={project.id} from="left">
+            <SlideWrapper key={project.id + index} from="left">
               <li
                 className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center  min-h-[400px] md:min-h-[500px]"
                 data-sr-id="4"
@@ -544,15 +688,15 @@ const Projects = (props: Props) => {
                   >
                     {project.description}
                   </div>
-                  <ul className="project-tech-list  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
+                  {/* <ul className="project-tech-list  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
                     {project.techs?.map((tech, index) => {
                       return (
-                        <li key={tech} className="mx-1 text-slate">
+                        <li key={tech + index} className="mx-1 text-slate">
                           {tech}
                         </li>
                       );
                     })}
-                  </ul>
+                  </ul> */}
                   <div className="project-links text-lightest_slate my-3 flex items-center gap-x-2">
                     <a
                       href={project.repo}

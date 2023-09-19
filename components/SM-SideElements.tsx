@@ -32,7 +32,7 @@ const SMSideElements = (props: Props) => {
         <li>
           <a
             className="text-slate w-4 h-4  fill-slate  hover:text-accent hover:scale-110 transition delay-500"
-            href="https://www.linkedin.com/in/bchiang7"
+            href="https://twitter.com/AwelNathaniel"
             aria-label="Twitter"
             target="_blank"
             rel="noreferrer"
@@ -43,7 +43,7 @@ const SMSideElements = (props: Props) => {
         <li>
           <a
             className="text-slate w-4 h-4  fill-slate  hover:text-accent hover:scale-110 transition delay-500"
-            href="https://www.instagram.com/bchiang7"
+            href="https://www.instagram.com/__nathaniel__awel/"
             aria-label="Instagram"
             target="_blank"
             rel="noreferrer"
@@ -54,8 +54,8 @@ const SMSideElements = (props: Props) => {
         <li>
           <a
             className="text-slate w-4 h-4  fill-slate  hover:text-accent hover:scale-110 transition delay-500"
-            href="https://www.instagram.com/bchiang7"
-            aria-label="Instagram"
+            href="https://medium.com/@natnael.awel"
+            aria-label="Medium"
             target="_blank"
             rel="noreferrer"
           >

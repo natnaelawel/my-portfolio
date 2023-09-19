@@ -20,7 +20,7 @@ const Footer = () => {
             <span>
               <CustomSVGIcon name="star" className="!w-4 !h-4" />
             </span>
-            <span>5,701</span>
+            {/* <span>5,701</span> */}
           </div>
         </a>
       </div>

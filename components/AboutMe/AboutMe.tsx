@@ -10,6 +10,7 @@ const AboutMe = (props: Props) => {
     'NextJS',
     'NodeJS',
     'NestJS',
+    'React Native',
     'VueJS',
     'Cypress',
     'Jest',
@@ -40,16 +41,23 @@ const AboutMe = (props: Props) => {
   ];
 
   return (
-    <section
+    <motion.section
+      data-scroll-container
       id="about"
-      className="w-11/12 lg:w-3/4 px-5 md:my-5 py-5 text-sm "
+      className="w-11/12 lg:w-3/4 px-5 md:my-5 py-5 text-sm"
       data-sr-id="0"
-      style={{
-        visibility: 'visible',
+      initial={{
+        opacity: 0,
+        x: -80,
+        y: -50,
+      }}
+      whileInView={{
         opacity: 1,
-        transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)',
-        transition:
-          'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
+        x: 0,
+        y: 0,
+      }}
+      transition={{
+        duration: 1.5,
       }}
     >
       <h2 className="flex my-3 font-bold text-2xl text-lightest_slate numbered-heading after:content-[''] after:block after:w-20 sm:after:w-52 after:h-[0.5px] after:bg-lightest_navy after:mx-2 after:my-auto ">
@@ -63,11 +71,9 @@ const AboutMe = (props: Props) => {
             damping: 20,
           }}
           initial={{
-            // x: '-1000px',
             opacity: 0,
           }}
           whileInView={{
-            // x: '0px',
             opacity: 1,
           }}
           className=" my-2 w-full text-xs leading-5 lg:text-sm lg:w-3/5 lg:leading-5 "
@@ -169,7 +175,12 @@ const AboutMe = (props: Props) => {
               styles.wrapper
             )}
           >
-            <div className={clsx('relative', styles.wrapper__img)}>
+            <a
+              href="https://github.com/natnaelawel"
+              target="_blank"
+              rel="noreferrer"
+              className={clsx('relative', styles.wrapper__img)}
+            >
               <div
                 className="absolute -z-20 top-0 left-0 "
                 style={{ maxWidth: '300px', display: 'block' }}
@@ -207,11 +218,11 @@ const AboutMe = (props: Props) => {
                 src="/images/me.jpg"
                 alt="Headshot"
               />
-            </div>
+            </a>
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -7,10 +7,23 @@ const Experience = () => {
     {
       id: 1,
       title: 'Software Engineer',
-      location: 'California, USA',
-      company: 'A2SV',
-      from: 'May 2018',
+      location: 'Addis Ababa, Ethiopia',
+      company: 'Alphabet Trading',
+      from: 'Jan 2023',
       to: 'Present',
+      descriptions: [
+        'Led development of 3+ successful websites, utilizing HTML, CSS, JavaScript, React, NextJS, Node.js, NestJS, GraphQL and more.',
+        'Innovated solutions, embraced Agile methodologies, and prioritized rigorous QA to consistently deliver reliable, client-satisfying results.',
+        'Developed and implemented new procedures and policies to improve the efficiency of the team, like a new code review process and Jira workflow.',
+      ],
+    },
+    {
+      id: 2,
+      title: 'Software Engineer',
+      location: 'California, USA',
+      company: 'Eskalate LLC',
+      from: 'June 2022',
+      to: 'April 2023',
       descriptions: [
         'Responsible for developing a responsive web app for A2SV portal based on ReactJS, NextJS, Apollo Client, GraphQL',
         'Worked on optimizing the website pages with SEO best practice in order to make them as optimized as possible, and attained a top ranking on Google.',
@@ -18,12 +31,12 @@ const Experience = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: 'Full-stack Developer',
       company: 'Tech 1 Factory LLC',
       location: 'Atlanta, Georgia, USA',
-      from: 'May 2021',
-      to: 'Present',
+      from: 'Mar 2021',
+      to: 'Jun 2022',
       descriptions: [
         'Implemented full-stack applications across various platforms using latest industry-adopted technologies and frameworks.',
         'Implemented 4+ front-end and back-end applications utilizing React.js, Node.js, TypeScript, and Serverless framework.',
@@ -33,7 +46,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: 'Full-stack Developer',
       company: 'Gebeya Inc.',
       location: 'Addis Ababa, Ethiopia',
@@ -46,12 +59,12 @@ const Experience = () => {
       ],
     },
     {
-      id: 4,
+      id: 5,
       title: 'Freelancing',
       company: 'Freelancing: (Upwork, Freelancer, etc)',
       location: '',
       from: 'Jun 2021',
-      to: 'Dec 2021',
+      to: 'Present',
       descriptions: [
         'Built RESTful APIs that served data to the JavaScript front-end based on dynamically chosen user inputs that handled over 500,000 concurrent users.',
         'Designed and coded 1,000+ unit and integration tests using Jest and Proficient methodology.',
@@ -60,7 +73,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 5,
+      id: 6,
       title: 'Backend Developer Intern',
       company: 'Eskalate LLC',
       location: 'California, USA',
@@ -112,8 +125,8 @@ const Experience = () => {
             return (
               <button
                 onClick={() => setActiveExp(experience)}
-                id={`tab-${experience.id}`}
-                key={`tab-${experience.id}`}
+                id={`tab-${experience.id}-${index}`}
+                key={`tab-${experience.id}-${index}`}
                 role="tab"
                 aria-selected="true"
                 aria-controls={`panel-${experience.id}`}
@@ -145,7 +158,8 @@ const Experience = () => {
             {experiences.map((exp, index) => {
               return activeExp.id === exp.id ? (
                 <motion.div
-                  id={`panel-${exp.id}`}
+                  key={`panel-${exp.id}-${index}`}
+                  id={`panel-${exp.id}-${index}`}
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -10, opacity: 0 }}
@@ -173,7 +187,7 @@ const Experience = () => {
                       {activeExp.descriptions.map(
                         (desc: string, index: number) => (
                           <li
-                            key={desc}
+                            key={desc + index}
                             className="text-justify sm:text-auto flex my-1 items-start justify-between before:my-1 relative before:content-['▹'] before:absolute before:text-accent before:text-xl before:leading-3 before:-ml-5"
                           >
                             {desc}

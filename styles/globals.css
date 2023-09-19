@@ -94,6 +94,8 @@
   margin: 0;
 }
 
+@import url('./locomotive-scroll.css');
+
 html,
 body {
   max-width: 100vw;
@@ -109,6 +111,8 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {

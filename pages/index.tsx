@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 import Navbar from '../components/Navbar/Navbar';
 import SMSideElements from '../components/SM-SideElements';
 import EmailSideElements from '../components/EmailSider';
@@ -29,30 +29,28 @@ export default function Home() {
   }, [router.isFallback, router.isReady]);
 
   return (
-    <>
-      <Suspense fallback={<Loader />}>
-        <Head>
-          <title>
-            Nathaniel Hussein | Front End Developer | Full-stack Developer -
-            Freelancer
-          </title>
-        </Head>
-        <div className="w-full h-full min-h-screen">
-          <Navbar />
-          <SMSideElements />
-          <EmailSideElements />
-          <main className="flex flex-col items-center w-full justify-center min-h-screen my-14 mt-20">
-            <HeroComponent />
-            <AboutMe />
-            <Experience />
-            <Projects />
-            <OtherProjects />
-            <ContactUS />
-          </main>
-          <Footer />
-        </div>
-      </Suspense>
-    </>
+    <Suspense fallback={<Loader />}>
+      <Head>
+        <title>
+          Nathaniel Hussein | Front End Developer | Full-stack Developer -
+          Freelancer
+        </title>
+      </Head>
+      <div className="w-full h-full min-h-screen" data-scroll-container>
+        <Navbar />
+        <SMSideElements />
+        <EmailSideElements />
+        <main className="flex flex-col items-center w-full justify-center min-h-screen my-14 mt-20">
+          <HeroComponent />
+          <AboutMe />
+          <Experience />
+          <Projects />
+          <OtherProjects />
+          <ContactUS />
+        </main>
+        <Footer />
+      </div>
+    </Suspense>
   );
 }
 

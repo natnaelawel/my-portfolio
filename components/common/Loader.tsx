@@ -5,7 +5,7 @@ type Props = {};
 const Loader = (props: Props) => {
   return (
     <div>
-      <img src="/public/images/letter-n-2-logo-animated.svg" alt="" />
+      <img src="/images/letter-n-2-logo-animated.svg" alt="" />
     </div>
   );
 };

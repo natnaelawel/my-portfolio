@@ -28,8 +28,8 @@ const navigationItems = [
   },
   {
     id: 3,
-    title: 'Work',
-    link: '#work',
+    title: 'Projects',
+    link: '#projects',
   },
   {
     id: 4,

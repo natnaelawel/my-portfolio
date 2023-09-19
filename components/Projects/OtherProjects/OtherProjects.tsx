@@ -1,5 +1,7 @@
 import React from 'react';
 import CustomSVGIcon from '../../../utils/getSVG';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -8,8 +10,8 @@ const OtherProjects = (props: Props) => {
     {
       id: '1',
       title: 'Responsible for API design and development of the Services',
-      site_link: '',
-      repo_link: '',
+      site_link: 'https://hakimhubweb.netlify.app/',
+      repo_link: '#',
       descriptions: [
         'HakimHub is a platform that provides information about healthcare and hospitals. With a few clicks, HakimHub also allows you to filter doctors by their respective subspeciality, experience, and location.',
       ],
@@ -26,7 +28,7 @@ const OtherProjects = (props: Props) => {
     {
       id: '2',
       title: 'Building a beautiful, fast, user friendly webpages',
-      site_link: 'https://www.alphabettrading.com/',
+      site_link: 'https://arbet-frontend.vercel.app/games/dice/',
       repo_link: '',
       descriptions: [
         'It is a web application for the company called Alphabet Trading, which is a coffee export firm based in its place of origin.',
@@ -44,10 +46,10 @@ const OtherProjects = (props: Props) => {
     {
       id: '3',
       title: 'Building a 100% decentralized ecosystem(DeFi)',
-      site_link: '',
+      site_link: 'https://nft-proj.vercel.app/',
       repo_link: '',
       descriptions: [
-        'Monarch is building a 100% decentralized ecosystem that bridges the knowledge gap between DeFi protocols and makes DeFi easy by bringing the best protocols together in one place.',
+        'Convex is building a 100% decentralized ecosystem that bridges the knowledge gap between DeFi protocols and makes DeFi easy by bringing the best protocols together in one place.',
       ],
       techs: [
         'ReactJS',
@@ -60,7 +62,7 @@ const OtherProjects = (props: Props) => {
     },
     {
       id: '4',
-      title: 'Zemastore (Final-year-project)',
+      title: 'Zemastore (Senior-year-project)',
       site_link: '',
       repo_link: '',
       descriptions: [
@@ -95,7 +97,111 @@ const OtherProjects = (props: Props) => {
         'Bitbucket',
       ],
     },
+    {
+      id: '7',
+      title: "Staking Game (E-commerce site's)",
+      site_link: 'https://staking-game-frontend.vercel.app/dashboard',
+      repo_link: '',
+      descriptions: [
+        'Staking Game is a platform that provides information about healthcare and hospitals. With a few clicks, HakimHub also allows you to filter doctors by their respective subspeciality, experience, and location.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'NodeJS',
+        'Web3JS',
+        'Blockchain',
+        'Typescript',
+      ],
+    },
+    {
+      id: '8',
+      title: "Bot shop (E-commerce site's)",
+      site_link: 'https://bot-shop-site.vercel.app/',
+      repo_link: '',
+      descriptions: [
+        'Bot shop is an e-commerce site that sells different types of bots. It is a full-stack application that is built with React, Next.js, Node.js, and MongoDB.',
+      ],
+      techs: ['ReactJS', 'NextJS', 'NodeJS', 'MongoDB', 'Typescript', 'Git'],
+    },
+    {
+      id: '9',
+      title: "SmartChain Poker (Blockchain's)",
+      site_link: 'https://nftminting-seven.vercel.app/',
+      repo_link: '',
+      descriptions: [
+        'SmartChain Poker is a decentralized application that allows users to play poker with their friends. It is built with React, Next.js, Node.js, and Solidity.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'NodeJS',
+        'Solidity',
+        'Blockchain',
+        'Typescript',
+      ],
+    },
+    {
+      id: '10',
+      title: "NFT-FI (Blockchain's)",
+      site_link: 'https://loan-shark-nft-fi.vercel.app/',
+      repo_link: '',
+      descriptions: [
+        'NFT-FI is a decentralized application that allows users to borrow money against their NFTs. It is built with React, Next.js, Node.js, and Solidity.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'NodeJS',
+        'Solidity',
+        'Blockchain',
+        'Typescript',
+      ],
+    },
   ];
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const listItem = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
+  const getScrollSpeed = (index: number) => {
+    switch (index) {
+      case 0:
+        return 0.5;
+      case 1:
+        return 0;
+      case 2:
+        return -0.5;
+      case 3:
+        return 0.5;
+      case 4:
+        return 0;
+      case 5:
+        return -0.5;
+      default:
+        return 0.5;
+    }
+  };
+
+  const [size, setSize] = React.useState(6);
+  const [projects, setProjects] = React.useState(otherProjects.slice(0, size));
+
+  function handleMore(): void {
+    const nextSize = Math.min(otherProjects.length, size + 6);
+    setProjects([...projects, ...otherProjects.slice(size, nextSize)]);
+    setSize(nextSize);
+  }
 
   return (
     <section className="w-11/12 lg:w-3/4 px-4 flex flex-col items-center gap-y-2">
@@ -112,7 +218,7 @@ const OtherProjects = (props: Props) => {
         Other Noteworthy Projects
       </h2>
 
-      <a
+      <Link
         className="inline-link archive-link font-mono text-accent text-sm"
         href="/archive"
         data-sr-id="8"
@@ -125,13 +231,26 @@ const OtherProjects = (props: Props) => {
         }}
       >
         view the archive
-      </a>
+      </Link>
 
-      <ul className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative my-2 lg:my-4">
-        {otherProjects.map((project, index) => {
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative my-2 lg:my-4"
+        data-scroll-section
+      >
+        {projects.map((project, index) => {
           return (
-            <li
-              key={project.id}
+            <motion.li
+              key={`${project.id}-${index}`}
+              data-scroll
+              variants={listItem}
+              whileInView={'show'}
+              initial="hidden"
+              transition={{
+                duration: 0.5,
+              }}
               className="relative hover:transform translate-x-5 cursor-pointer min-h-full w-full "
               style={{
                 transition:
@@ -204,12 +323,15 @@ const OtherProjects = (props: Props) => {
                   </ul>
                 </footer>
               </div>
-            </li>
+            </motion.li>
           );
         })}
-      </ul>
-      <button className="email-link text-accent bg-transparent border border-accent px-4 py-3 leading-4 cursor-pointer hover:bg-accent/5">
-        Show More
+      </motion.ul>
+      <button
+        onClick={handleMore}
+        className="email-link text-accent bg-transparent border border-accent px-4 py-3 leading-4 cursor-pointer hover:bg-accent/5"
+      >
+        Show More {projects.length}/{otherProjects.length}
       </button>
     </section>
   );

@@ -5,6 +5,7 @@ import {
   motion,
   useCycle,
   AnimatePresence,
+  useTransform,
 } from 'framer-motion';
 import { useDimensions } from '../../hooks/useDimensions';
 import { Navigation } from './Navigation';
@@ -43,6 +44,7 @@ const Navbar = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
+  const rotateZAngle = useTransform(scrollYProgress, [0, 1], [0.001, 360]);
   return (
     <div
       style={{
@@ -61,7 +63,8 @@ const Navbar = () => {
           <div className="w-full flex  items-center justify-between ">
             <div className="shrink-0">
               <a href="#" title="logo" className="flex">
-                <img
+                <motion.img
+                  style={{ rotateZ: rotateZAngle }}
                   className="w-auto h-10 md:h-16 "
                   src="/images/letter-n-2-logo.svg"
                   alt=""
@@ -94,8 +97,7 @@ const Navbar = () => {
                   title=""
                   className=" font-normal text-gray-400 transition-all duration-200 hover:text-accent"
                 >
-                  {' '}
-                  Experience{' '}
+                  Experience
                 </motion.a>
 
                 <motion.a
@@ -105,11 +107,11 @@ const Navbar = () => {
                     delay: 0.2,
                     type: 'spring',
                   }}
-                  href="#work"
+                  href="#projects"
                   title=""
                   className=" font-normal text-gray-400 transition-all duration-200 hover:text-accent"
                 >
-                  Work{' '}
+                  Projects{' '}
                 </motion.a>
 
                 <motion.a
