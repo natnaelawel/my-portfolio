@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
   motion,
   useScroll,
@@ -10,6 +10,10 @@ import {
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { Container } from 'react-dom';
+
 
 const HeroComponent = () => {
   const ref = useRef(null);
@@ -56,6 +60,8 @@ const HeroComponent = () => {
     };
   }, [selectedTitleIndex]);
 
+
+
   return (
     <motion.section
       transition={{
@@ -74,6 +80,7 @@ const HeroComponent = () => {
       className="px-2 w-3/4 lg:px-10 my-5 lg:my-10 py-5 lg:py-12 relative min-h-[800px]  overflow-hidden gap-y-2 sm:gap-y-5 md:gap-y-10 sm:pb-16 lg:pb-20 xl:pb-24"
       data-scroll-container
     >
+      
       <div className="fadeup-enter-done  transition delay-100 md:py-5 text-lg sm:text-xl text-accent flex items-center">
         <h1 className="font-mono ">Hi</h1>
         <motion.span className="animate-wiggle  text-4xl self-start pb-5">

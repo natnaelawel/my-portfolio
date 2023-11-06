@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   useScroll,
   useSpring,
@@ -10,6 +10,7 @@ import {
 import { useDimensions } from '../../hooks/useDimensions';
 import { Navigation } from './Navigation';
 import { MenuToggle } from './MenuToggle';
+import clsx from 'clsx';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -45,6 +46,37 @@ const Navbar = () => {
   const { height } = useDimensions(containerRef);
 
   const rotateZAngle = useTransform(scrollYProgress, [0, 1], [0.001, 360]);
+
+  const sections: any[] = [
+    { id: "about",},
+    { id: "experience",},
+    { id: "projects",  },
+    {
+      id: "contact"
+    }
+  ];
+
+  const [activeSection, setActiveSection] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      for (const section of sections) {
+        const element: any = document.getElementById(section.id);
+        if(element){
+          const rect = element.getBoundingClientRect();
+          console.log(section.id, rect.top, rect.bottom, window.innerHeight)
+          if (rect.top >= 0 && rect.bottom >= window.innerHeight) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
       style={{
@@ -82,7 +114,12 @@ const Navbar = () => {
                   }}
                   href="#about"
                   title=""
-                  className=" font-normal text-gray-400 transition-all duration-200 hover:text-accent"
+                  className={
+                    clsx(
+                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
+                      activeSection=="#about" && "text-accent"
+                    )
+                  }
                 >
                   About{' '}
                 </motion.a>
@@ -95,8 +132,13 @@ const Navbar = () => {
                   }}
                   href="#experience"
                   title=""
-                  className=" font-normal text-gray-400 transition-all duration-200 hover:text-accent"
-                >
+                  className={
+                    clsx(
+                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
+                      activeSection=="#experience" && "text-accent"
+                    )
+                  }           
+                       >
                   Experience
                 </motion.a>
 
@@ -109,8 +151,12 @@ const Navbar = () => {
                   }}
                   href="#projects"
                   title=""
-                  className=" font-normal text-gray-400 transition-all duration-200 hover:text-accent"
-                >
+                  className={
+                    clsx(
+                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
+                      activeSection=="#projects" && "text-accent"
+                    )
+                  }                  >
                   Projects{' '}
                 </motion.a>
 
@@ -122,8 +168,12 @@ const Navbar = () => {
                   }}
                   href="#contact"
                   title=""
-                  className=" font-normal text-gray-400 transition-all duration-200 hover:text-accent"
-                >
+                  className={
+                    clsx(
+                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
+                      activeSection=="#contact" && "text-accent"
+                    )
+                  }                  >
                   Contact{' '}
                 </motion.a>
               </nav>
