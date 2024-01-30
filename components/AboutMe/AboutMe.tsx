@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 import React from 'react';
 import styles from './aboutme.module.css';
@@ -44,7 +46,7 @@ const AboutMe = (props: Props) => {
     <motion.section
       data-scroll-container
       id="about"
-      className="w-11/12 lg:w-3/4 px-5 md:my-5 py-5 text-sm"
+      className="w-11/12 lg:w-3/4 px-5 md:my-5 py-5 text-sm relative"
       data-sr-id="0"
       initial={{
         opacity: 0,

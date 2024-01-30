@@ -1,49 +1,114 @@
 'use client';
 
 import React from 'react';
-import CustomSVGIcon from '../../../utils/getSVG';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-
+import CustomSVGIcon from '../../../utils/getSVG';
 type Props = {};
 
-const OtherProjects = (props: Props) => {
+const ProjectsList = (props: Props) => {
   const otherProjects = [
+    {
+      id: '10',
+      title: "NFT-FI (Blockchain's)",
+      site_link: 'https://loan-shark-nft-fi.vercel.app/',
+      repo_link: 'https://loan-shark-nft-fi.vercel.app/',
+      descriptions: [
+        'NFT-FI is a decentralized application that allows users to borrow money against their NFTs. It is built with React, Next.js, Node.js, and Solidity.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'NodeJS',
+        'Solidity',
+        'Blockchain',
+        'Typescript',
+      ],
+    },
+    {
+      id: '11',
+      title: 'Byte Swap',
+      site_link: 'https://byteswap-landing.vercel.app/',
+      repo_link: 'https://byteswap-landing.vercel.app/',
+      descriptions: [
+        'It is a platform to Trade, Earn, And Own Crypto On The All-In-One Multichain DEX  ',
+        'It helps in Shaping The Future Of Decentralized Trading :Byteswap’s Unstoppable Expansion',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Typescript',
+        'Blockchain',
+        'Solidity',
+        'EthersJS',
+        'NodeJS',
+      ],
+    },
+    {
+      id: '12',
+      title: 'Launch Pad',
+      site_link: 'https://floxy-front.vercel.app/',
+      repo_link: 'https://floxy-front.vercel.app/',
+      descriptions: [
+        'It is a platform that helps Get First Access To New And Innovative Projects.',
+        'The platform helps in connecting the web2 world with web3. and offer a full and complete ecosystem for the crypto industry.',
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Typescript',
+        'Blockchain',
+        'Solidity',
+        'EthersJS',
+        'NodeJS',
+      ],
+    },
+    {
+      id: '13',
+      title: 'A2SV Portal',
+      site_link: '',
+      repo_link: '',
+      descriptions: [
+        'It is a portal system that aims to simplify internal working procedures like tracking student progress, as well as automating communication within our company.',
+        "I'm responsible for developing a responsive web app for A2SV portal based on",
+      ],
+      techs: [
+        'ReactJS',
+        'NextJS',
+        'Typescript',
+        'GraphQL',
+        'Apollo Client',
+        'MongoDB',
+        'NodeJS',
+        'GCP',
+        'Git',
+      ],
+    },
     {
       id: '1',
       title: 'Responsible for API design and development of the Services',
-      site_link: 'https://hakimhubweb.netlify.app/',
+      site_link: 'https://loan-shark-nft-fi.vercel.app/',
       repo_link: '#',
-      descriptions: [
-        'HakimHub is a platform that provides information about healthcare and hospitals. With a few clicks, HakimHub also allows you to filter doctors by their respective subspeciality, experience, and location.',
-      ],
+      descriptions: ['An application for using your NFTs to get a crypto loan'],
       techs: [
         'Typescript',
         'Nodejs',
-        'Nestjs',
+        'Web3',
+        'EtherJS',
         'Git',
-        'MongoDB',
         'Docker',
-        'GCP',
+        'Vercel',
       ],
     },
     {
       id: '2',
       title: 'Building a beautiful, fast, user friendly webpages',
-      site_link: 'https://arbet-frontend.vercel.app/games/dice/',
+      site_link: 'https://arbet-frontend.vercel.app/games/roulette/',
       repo_link: '',
       descriptions: [
-        'It is a web application for the company called Alphabet Trading, which is a coffee export firm based in its place of origin.',
+        'Arbet is a platform that works as a game, using the blockchain technology to make it more secure and transparent.',
       ],
-      techs: [
-        'ReactJS',
-        'NextJS',
-        'Apollo Client',
-        'Git',
-        'SEO',
-        'Agile',
-        'Scrum',
-      ],
+      techs: ['ReactJS', 'NextJS', 'Typescript', 'Web3JS', 'Git', 'SEO'],
     },
     {
       id: '3',
@@ -133,21 +198,25 @@ const OtherProjects = (props: Props) => {
         'Typescript',
       ],
     },
+
     {
-      id: '10',
-      title: "NFT-FI (Blockchain's)",
-      site_link: 'https://loan-shark-nft-fi.vercel.app/',
-      repo_link: 'https://loan-shark-nft-fi.vercel.app/',
+      id: '14',
+      title: 'The Bandit Project',
+      site_link: 'https://staking-game-frontend.vercel.app/dashboard',
+      repo_link: 'https://staking-game-frontend.vercel.app/dashboard',
       descriptions: [
-        'NFT-FI is a decentralized application that allows users to borrow money against their NFTs. It is built with React, Next.js, Node.js, and Solidity.',
+        'The Bandit project is a game application using blockchain',
       ],
       techs: [
         'ReactJS',
         'NextJS',
-        'NodeJS',
-        'Solidity',
-        'Blockchain',
         'Typescript',
+        'GraphQL',
+        'Apollo Client',
+        'MongoDB',
+        'NodeJS',
+        'GCP',
+        'Git',
       ],
     },
   ];
@@ -177,7 +246,7 @@ const OtherProjects = (props: Props) => {
   }
 
   return (
-    <section className="w-11/12 lg:w-3/4 px-4 flex flex-col items-center gap-y-2">
+    <section className="my-5 w-11/12 mx-auto lg:w-3/4 px-4 flex flex-col items-center gap-y-2">
       <h2
         className="font-semibold text-lightest_slate text-2xl"
         style={{
@@ -193,7 +262,7 @@ const OtherProjects = (props: Props) => {
 
       <Link
         className="inline-link archive-link font-mono text-accent text-sm"
-        href="/projects"
+        href="/archive"
         data-sr-id="8"
         style={{
           visibility: 'visible',
@@ -203,7 +272,7 @@ const OtherProjects = (props: Props) => {
             'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
         }}
       >
-        explore more projects
+        view the archive
       </Link>
 
       <motion.ul
@@ -310,4 +379,4 @@ const OtherProjects = (props: Props) => {
   );
 };
 
-export default OtherProjects;
+export default ProjectsList;

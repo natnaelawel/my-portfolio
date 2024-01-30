@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef, useState } from 'react';
 import {
   useScroll,
@@ -11,6 +13,7 @@ import { useDimensions } from '../../hooks/useDimensions';
 import { Navigation } from './Navigation';
 import { MenuToggle } from './MenuToggle';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -48,12 +51,12 @@ const Navbar = () => {
   const rotateZAngle = useTransform(scrollYProgress, [0, 1], [0.001, 360]);
 
   const sections: any[] = [
-    { id: "about",},
-    { id: "experience",},
-    { id: "projects",  },
+    { id: 'about' },
+    { id: 'experience' },
+    { id: 'projects' },
     {
-      id: "contact"
-    }
+      id: 'contact',
+    },
   ];
 
   const [activeSection, setActiveSection] = useState(null);
@@ -62,9 +65,9 @@ const Navbar = () => {
     const handleScroll = () => {
       for (const section of sections) {
         const element: any = document.getElementById(section.id);
-        if(element){
+        if (element) {
           const rect = element.getBoundingClientRect();
-          console.log(section.id, rect.top, rect.bottom, window.innerHeight)
+          console.log(section.id, rect.top, rect.bottom, window.innerHeight);
           if (rect.top >= 0 && rect.bottom >= window.innerHeight) {
             setActiveSection(section.id);
             break;
@@ -73,8 +76,8 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -88,20 +91,23 @@ const Navbar = () => {
       className="w-full filter-none !pointer-events-auto !select-auto z-20 fixed top-0 font-mono !text-xs"
     >
       <div className="w-full">
-        <motion.div className="bg-accent h-[2px]" style={{ scaleX }} />
+        <motion.div
+          className="bg-accent h-[2px]"
+          style={{ scaleX, transformOrigin: 'left' }}
+        />
       </div>
       <header className="w-full py-4 sm:py-2 ">
         <div className="flex px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="w-full flex  items-center justify-between ">
-            <div className="shrink-0">
-              <a href="#" title="logo" className="flex">
+            <div className="relative">
+              <Link href="/" className="shrink-0">
                 <motion.img
                   style={{ rotateZ: rotateZAngle }}
                   className="w-auto h-10 md:h-16 "
                   src="/images/letter-n-2-logo.svg"
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="hidden md:flex items-center gap-x-10 font-mono">
               <nav className="hidden ml-10 mr-auto space-x-5 lg:ml-20 lg:space-x-7 md:flex md:items-center md:justify-start">
@@ -114,12 +120,10 @@ const Navbar = () => {
                   }}
                   href="#about"
                   title=""
-                  className={
-                    clsx(
-                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
-                      activeSection=="#about" && "text-accent"
-                    )
-                  }
+                  className={clsx(
+                    ' font-normal text-gray-400 transition-all duration-200 hover:text-accent',
+                    activeSection == '#about' && 'text-accent'
+                  )}
                 >
                   About{' '}
                 </motion.a>
@@ -132,13 +136,11 @@ const Navbar = () => {
                   }}
                   href="#experience"
                   title=""
-                  className={
-                    clsx(
-                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
-                      activeSection=="#experience" && "text-accent"
-                    )
-                  }           
-                       >
+                  className={clsx(
+                    ' font-normal text-gray-400 transition-all duration-200 hover:text-accent',
+                    activeSection == '#experience' && 'text-accent'
+                  )}
+                >
                   Experience
                 </motion.a>
 
@@ -151,12 +153,11 @@ const Navbar = () => {
                   }}
                   href="#projects"
                   title=""
-                  className={
-                    clsx(
-                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
-                      activeSection=="#projects" && "text-accent"
-                    )
-                  }                  >
+                  className={clsx(
+                    ' font-normal text-gray-400 transition-all duration-200 hover:text-accent',
+                    activeSection == '#projects' && 'text-accent'
+                  )}
+                >
                   Projects{' '}
                 </motion.a>
 
@@ -168,12 +169,11 @@ const Navbar = () => {
                   }}
                   href="#contact"
                   title=""
-                  className={
-                    clsx(
-                      " font-normal text-gray-400 transition-all duration-200 hover:text-accent",
-                      activeSection=="#contact" && "text-accent"
-                    )
-                  }                  >
+                  className={clsx(
+                    ' font-normal text-gray-400 transition-all duration-200 hover:text-accent',
+                    activeSection == '#contact' && 'text-accent'
+                  )}
+                >
                   Contact{' '}
                 </motion.a>
               </nav>

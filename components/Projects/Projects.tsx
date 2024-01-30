@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import CustomSVGIcon from '../../utils/getSVG';
 import styles from './projects.module.css';
@@ -7,6 +9,60 @@ type Props = {};
 
 const Projects = (props: Props) => {
   const projects = [
+    {
+      id: '0',
+      title: 'Akraabi',
+      href: 'https://www.akraabi.com/',
+      img: '/images/projects/akraabi-hero.png',
+      description: (
+        <p className="flex flex-wrap text-right w-full flex-row">
+          <span className="">
+            It is the hub of global coffee connections. We link passionate
+            coffee producers in Ethiopia directly to roasters and coffee traders
+            worldwide, revolutionizing the green coffee trade. Explore
+            exceptional beans, foster direct relationships, and redefine your
+            coffee experience with us.
+            <br />
+            <a
+              className="text-accent inline"
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReactJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NextJS
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tailwindcss
+            </a>
+            ,&nbsp;
+            <a
+              className="text-accent inline-flex"
+              href="https://github.com/locomotivemtl/locomotive-scroll/tree/v5-beta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Locomotive Scroll
+            </a>
+            .
+          </span>
+        </p>
+      ),
+    },
     {
       id: '1',
       title: 'Lucid pictures website',
@@ -74,7 +130,7 @@ const Projects = (props: Props) => {
       id: '2',
       title: 'Alphabet Trading website',
       href: 'https://www.alphabettrading.com/',
-      img: '/images/projects/Alphabet Trading.png',
+      img: '/images/projects/alphabet-trading.png',
       description: (
         <p className="flex flex-wrap text-right w-full flex-row">
           <span className="">
@@ -143,78 +199,7 @@ const Projects = (props: Props) => {
         'Scrum',
       ],
     },
-    {
-      id: '3',
-      title: 'A2SV Portal',
-      href: 'https://portal.a2sv.org/',
-      img: '/images/projects/portal_group.png',
-      description: (
-        <p className="flex flex-wrap text-right w-full flex-row">
-          <span className="">
-            It is a portal system that aims to simplify internal working
-            procedures like tracking student progress, as well as automating
-            communication within our company. I&apos;m responsible for
-            developing a responsive web app for A2SV portal based on &nbsp;
-            <a
-              className="text-accent inline"
-              href="https://reactjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ReactJS
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://nextjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NextJS
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://tailwindcss.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tailwindcss
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://www.apollographql.com/docs/react/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apollo Client
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://graphql.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GraphQL
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://gcp.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GCP
-            </a>
-            .
-          </span>
-        </p>
-      ),
-      repo: 'https://github.com/bchiang7/halcyon-site',
-      techs: ['ReactJS', 'NextJS', 'Tailwindcss', 'Docker', 'Agile', 'Scrum'],
-    },
+
     {
       id: '4',
       title: 'Sekanson',
@@ -302,69 +287,69 @@ const Projects = (props: Props) => {
         'Smart Contract',
       ],
     },
-    {
-      id: '5',
-      title: 'Monarch',
-      href: 'https://thorstarter-three.vercel.app/',
-      img: '/images/projects/monarch-1.png',
-      description: (
-        <p className="flex flex-wrap justify-end">
-          <span>
-            Monarch is building a 100% decentralized ecosystem that bridges the
-            knowledge gap between DeFi protocols and makes DeFi easy by bringing
-            the best protocols together in one place. The Kingmaker is our
-            project incubator where we build, fund and launch the most promising
-            projects in&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://www.coinbase.com/learn/crypto-basics/what-is-defi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DeFi
-            </a>
-            .&nbsp; I was responsible for building the frontend part using&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://reactjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ReactJS
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://nextjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NextJS
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://tailwindcss.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tailwindcss
-            </a>
-            ,&nbsp;
-            <a
-              className="text-accent inline-flex"
-              href="https://www.typescriptlang.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Typescript
-            </a>
-          </span>
-        </p>
-      ),
-      repo: 'https://github.com/bchiang7/halcyon-site',
-      techs: ['ReactJS', 'NextJS', 'Web3'],
-    },
+    // {
+    //   id: '5',
+    //   title: 'Monarch',
+    //   href: 'https://thorstarter-three.vercel.app/',
+    //   img: '/images/projects/monarch-1.png',
+    //   description: (
+    //     <p className="flex flex-wrap justify-end">
+    //       <span>
+    //         Monarch is building a 100% decentralized ecosystem that bridges the
+    //         knowledge gap between DeFi protocols and makes DeFi easy by bringing
+    //         the best protocols together in one place. The Kingmaker is our
+    //         project incubator where we build, fund and launch the most promising
+    //         projects in&nbsp;
+    //         <a
+    //           className="text-accent inline-flex"
+    //           href="https://www.coinbase.com/learn/crypto-basics/what-is-defi"
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           DeFi
+    //         </a>
+    //         .&nbsp; I was responsible for building the frontend part using&nbsp;
+    //         <a
+    //           className="text-accent inline-flex"
+    //           href="https://reactjs.org/"
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           ReactJS
+    //         </a>
+    //         ,&nbsp;
+    //         <a
+    //           className="text-accent inline-flex"
+    //           href="https://nextjs.org/"
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           NextJS
+    //         </a>
+    //         ,&nbsp;
+    //         <a
+    //           className="text-accent inline-flex"
+    //           href="https://tailwindcss.com/"
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           Tailwindcss
+    //         </a>
+    //         ,&nbsp;
+    //         <a
+    //           className="text-accent inline-flex"
+    //           href="https://www.typescriptlang.org/"
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //         >
+    //           Typescript
+    //         </a>
+    //       </span>
+    //     </p>
+    //   ),
+    //   repo: 'https://github.com/bchiang7/halcyon-site',
+    //   techs: ['ReactJS', 'NextJS', 'Web3'],
+    // },
   ];
 
   return (
@@ -376,146 +361,6 @@ const Projects = (props: Props) => {
         {projects.map((project, index) => {
           return index % 2 === 0 ? (
             <SlideWrapper key={project.id + index} from="right">
-              {/* <li
-                key={project.id}
-                className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center min-h-[400px] md:min-h-[500px]"
-                data-sr-id="4"
-                style={{
-                  transform:
-                    'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)',
-                  transition:
-                    'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
-                }}
-              >
-                <div
-                  className="hidden md:flex project-image z-10 relative  md:min-w-[300px] justify-center md:w-[700px] md:[gridArea:1/1/-1/6]"
-                  style={{
-                    boxShadow: '0 10px 30px -15px var(--navy-shadow)',
-                    transition: 'var(--transition)',
-                  }}
-                >
-                  <a
-                    className={clsx(
-                      styles.project_image__a,
-                      'w-full'
-                    )}
-                    style={{
-                      backgroundColor: 'var(--green)',
-                      borderRadius: 'var(--border-radius)',
-                      verticalAlign: 'middle',
-                    }}
-                    href={project.href}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div
-                      style={{
-                        boxShadow: '0 10px 30px -15px var(--navy-shadow)',
-                        transition: 'var(--transition)',
-                      }}
-                      className={clsx(styles.wrapper, "h-fit")}
-                    >
-                      <div className={clsx('relative', styles.wrapper__img, "aspect-video")}>
-                        <div className="absolute z-20 inset-0">
-                          <img
-                            alt=""
-                            role="presentation"
-                            aria-hidden="true"
-                            src="data:image/svg+xml;charset=utf-8,%3Csvg height='450' width='450' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                            style={{
-                              maxWidth: '100%',
-                              height: '100%',
-                              display: 'block',
-                              position: 'static',
-                            }}
-                          />
-                        </div>
-                        <div
-                          aria-hidden="true"
-                          data-placeholder-image=""
-                          style={{
-                            opacity: 0,
-                            transition: 'opacity 500ms linear 0s',
-                            backgroundColor: 'rgb(232, 232, 232)',
-                            position: 'absolute',
-                            inset: '0px',
-                            objectFit: 'cover',
-                          }}
-                        ></div>
-                        <Image
-                          fill
-                          className="h-full w-full object-cover min-h-full"
-                          decoding="async"
-                          src={project.img}
-                          alt={project.title}
-                        />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div className="w-full project-content relative gap-y-3 flex flex-col items-end text-right col-span-12 sm:[gridArea:1/6/-1/-1]">
-                  <p className="project-overline  text-accent text-sm font-mono">
-                    Featured Project
-                  </p>
-                  <h3 className="project-title text-lightest_slate font-semibold my-3 hover:text-accent text-2xl hover:font-bold">
-                    <a
-                      href={project.href}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      {project.title}
-                    </a>
-                  </h3>
-                  <div
-                    className="w-full md:w-auto flex flex-col flex-wrap project-description relative z-20 rounded-lg md:min-w-[300px]"
-                    style={{
-                      boxShadow: '0 10px 30px -15px var(--navy-shadow)',
-                      transition: 'var(--transition)',
-                      position: 'relative',
-                      zIndex: 20,
-                      padding: '25px',
-                      borderRadius: 'var(--border-radius)',
-                      backgroundColor: 'var(--light-navy)',
-                      color: 'var(--light-slate)',
-                      fontSize: 'var(--fz-lg)',
-                    }}
-                  >
-                    {project.description}
-                  </div>
-                  <ul className=" project-tech-list my-5 flex gap-x-2 tracking-tighter text-xs max-w-md self-end text-right flex-wrap justify-end relative mx-2 z-20 font-mono">
-                    {project.techs?.map((tech, index) => {
-                      return (
-                        <li
-                          key={tech}
-                          className="mx-1 text-slate whitespace-nowrap"
-                        >
-                          {tech}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <div className="project-links text-lightest_slate my-3 flex justify-end items-center gap-x-2">
-                    <a
-                      href={project.repo}
-                      aria-label="GitHub Link"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <CustomSVGIcon className="" name="github" />
-                    </a>
-                    <a
-                      href={project.href}
-                      aria-label="External Link"
-                      className="external"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <CustomSVGIcon className="" name="external-link" />
-                    </a>
-                  </div>
-                </div>
-              </li> */}
               <li
                 className="group relative opacity-100 visible grid gap-3 grid-cols-12 items-center  min-h-[400px] md:min-h-[500px] "
                 data-sr-id="4"
@@ -555,15 +400,7 @@ const Projects = (props: Props) => {
                   >
                     {project.description}
                   </div>
-                  {/* <ul className="project-tech-list justify-end  text-xs my-5 gap-x-2 w-full tracking-tighter flex-wrap relative mx-2 z-20 font-mono flex min-w-[300px]">
-                    {project.techs?.map((tech, index) => {
-                      return (
-                        <li key={tech + index} className="mx-1 text-slate">
-                          {tech}
-                        </li>
-                      );
-                    })}
-                  </ul> */}
+
                   <div className="project-links text-lightest_slate my-3 flex items-center gap-x-2">
                     <a
                       href={project.repo}
@@ -594,7 +431,7 @@ const Projects = (props: Props) => {
                 >
                   <a
                     className={clsx('h-full', styles.project_image__a)}
-                    href="https://halcyon-theme.netlify.com/"
+                    href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -726,7 +563,7 @@ const Projects = (props: Props) => {
                 >
                   <a
                     className={clsx('h-full', styles.project_image__a)}
-                    href="https://halcyon-theme.netlify.com/"
+                    href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
                   >

@@ -1,4 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+'use client';
+
+import React, { useState, useRef, useEffect } from 'react';
 import {
   motion,
   useScroll,
@@ -10,15 +12,10 @@ import {
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import { Container } from 'react-dom';
-
 
 const HeroComponent = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
 
   const titles = [
     {
@@ -60,8 +57,6 @@ const HeroComponent = () => {
     };
   }, [selectedTitleIndex]);
 
-
-
   return (
     <motion.section
       transition={{
@@ -80,7 +75,6 @@ const HeroComponent = () => {
       className="px-2 w-3/4 lg:px-10 my-5 lg:my-10 py-5 lg:py-12 relative min-h-[800px]  overflow-hidden gap-y-2 sm:gap-y-5 md:gap-y-10 sm:pb-16 lg:pb-20 xl:pb-24"
       data-scroll-container
     >
-      
       <div className="fadeup-enter-done  transition delay-100 md:py-5 text-lg sm:text-xl text-accent flex items-center">
         <h1 className="font-mono ">Hi</h1>
         <motion.span className="animate-wiggle  text-4xl self-start pb-5">
@@ -108,7 +102,7 @@ const HeroComponent = () => {
           {titles.map((title, index) => {
             return index === selectedTitleIndex ? (
               <motion.h3
-                key={title.id}
+                key={title.id + index}
                 transition={{
                   duration: 1.2,
                   type: 'spring',
@@ -154,10 +148,10 @@ const HeroComponent = () => {
       <div className="relative inline-flex group fadeup-enter-done transition duration-500 my-10">
         <motion.div
           initial={{}}
-          className="absolute -inset-0.5 bg-gradient-to-r from-accent to-light_navy rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"
+          className="absolute -inset-0.5 bg-gradient-to-r from-accent to-light_navy rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt border"
         ></motion.div>
         <a
-          className="relative email-link text-accent hover:text-navy  bg-navy border  rounded-sm lg:rounded-lg px-4 lg:px-8 py-2 lg:py-3 leading-4 cursor-pointer hover:bg-accent/75"
+          className="relative email-link text-accent hover:text-white  bg-navy border  rounded-sm lg:rounded-lg px-4 lg:px-8 py-2 lg:py-3 leading-4 cursor-pointer hover:bg-accent/75 transition-all duration-500 ease-in-out"
           href="mailto:natnael.awel@gmail.com"
           target="_blank"
           rel="noreferrer"

@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+'use client';
 
-export default function App({ Component, pageProps }: AppProps) {
+import { useEffect } from 'react';
+
+export default function LocomotiveScrollComponent() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
@@ -30,5 +30,5 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-  return <Component {...pageProps} />;
+  return null;
 }

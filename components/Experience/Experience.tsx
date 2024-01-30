@@ -1,6 +1,9 @@
+'use client';
+
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import randomInt from '../../utils/getRandomInt';
 
 const Experience = () => {
   const experiences = [
@@ -93,7 +96,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-11/12 lg:w-3/4 px-4 lg:px-5 my-5 py-5  "
+      className="w-11/12 lg:w-3/4 px-4 lg:px-5 my-5 py-5  relative"
       data-sr-id="2"
       style={{
         visibility: 'visible',
@@ -125,8 +128,8 @@ const Experience = () => {
             return (
               <button
                 onClick={() => setActiveExp(experience)}
-                id={`tab-${experience.id}-${index}`}
-                key={`tab-${experience.id}-${index}`}
+                id={`tab-${experience.id}-${index} ${randomInt(1000)}`}
+                key={`tab-${experience.id}-${index} ${randomInt(1000)}`}
                 role="tab"
                 aria-selected="true"
                 aria-controls={`panel-${experience.id}`}
@@ -152,13 +155,13 @@ const Experience = () => {
           animate={{
             x: '0px',
           }}
-          className="w-full max-w-[700px]  min-h-[400px] py-5 p-auto text-[15px] flex-wrap md:px-4"
+          className="w-full max-w-[700px]  min-h-[400px] py-5 p-auto text-[15px] flex-wrap md:px-4 relative"
         >
           <AnimatePresence mode="wait">
             {experiences.map((exp, index) => {
               return activeExp.id === exp.id ? (
                 <motion.div
-                  key={`panel-${exp.id}-${index}`}
+                  key={`panel-${exp.id}-${index}-${randomInt(1000)}`}
                   id={`panel-${exp.id}-${index}`}
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -187,7 +190,9 @@ const Experience = () => {
                       {activeExp.descriptions.map(
                         (desc: string, index: number) => (
                           <li
-                            key={desc + index}
+                            key={`${
+                              desc + index + activeExp.id + randomInt(1000)
+                            }`}
                             className="text-justify sm:text-auto flex my-1 items-start justify-between before:my-1 relative before:content-['▹'] before:absolute before:text-accent before:text-xl before:leading-3 before:-ml-5"
                           >
                             {desc}
